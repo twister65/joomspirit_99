@@ -468,13 +468,13 @@
 		
 		<fieldset name="08" label="Animations">
 			
+			<field name="docsr" type="note" class="alert alert-info" close="true" label="To customize animations, see ScrollReveal documentation :" description="https://scrollrevealjs.org/api/defaults.html"/>
+			
 			<field name="animation" type="radio" default="yes" label="Enable animations for the modules positions" description="Disable this option if you doesn't want use any animation on scroll">				
 				<option value="yes">Yes</option>
 				<option value="no">No</option>
 			</field>
-	
-			<field name="docsr" type="label" default="https://scrollrevealjs.org/api/defaults.html" label="Customize these effects" description="See documentation, https://scrollrevealjs.org/api/defaults.html" size="30" disabled="true" />
-	
+
 			<field type="spacer" label="Social icons" />
 			
 			<field name="animation_social" type="radio" default="yes" label="Enable animation for Social icons" description="">				
