@@ -553,9 +553,15 @@ foreach ($googleFonts as $loadFont) {
 
 	<?php if ( (! preg_match("/MSIE 7/", $_SERVER['HTTP_USER_AGENT'])) && (! preg_match("/MSIE 8/", $_SERVER['HTTP_USER_AGENT'])) && ($this->params->get('animation') == 'yes' ) ) : ?>
 		<script type="text/javascript">
+			function baffleSelection(e) {
+				let b = baffle(e);
+				b.start()
+					.set({ speed: 40 })
+					.reveal(0,1000);
+			}
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_social') == 'yes' ) : ?>
 				sr.reveal('.social-links', { <?php echo $this->params->get('animation_social_text'); ?> });
-				sr.reveal('.text_social_icons', { <?php echo $this->params->get('animation_social_text'); ?>, afterReset:baffleSelection('.text_social_icons') });
+				sr.reveal('.text_social_icons', { <?php echo $this->params->get('animation_social_text'); ?>, afterReveal:function(){baffleSelection('.text_social_icons');} });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_translate') == 'yes' ) : ?>
 					sr.reveal('#translate', { <?php echo $this->params->get('animation_translate_text'); ?> });
@@ -611,13 +617,6 @@ foreach ($googleFonts as $loadFont) {
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_search') == 'yes' ) : ?>
 					sr.reveal('#search', { <?php echo $this->params->get('animation_search_text'); ?>, beforeReset:function(){sr.sync()} });
 			<?php endif ; ?>
-
-			function baffleSelection(e) {
-				let b = baffle(e);
-				b.start()
-					.set({ speed: 40 })
-					.reveal(3000,1500);
-			}
 		</script>
 	<?php endif ; ?>
 	
