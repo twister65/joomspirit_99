@@ -213,6 +213,15 @@ foreach ($googleFonts as $loadFont) {
 	<!-- Bootstrap 3 js 		-->
 	<script type="text/javascript" src="<?php echo $filepath ?>/lib/js/bootstrap.min.js"></script>
 
+	<!-- load Baffle 3 (text animation) -->
+	<script src="<?php echo $filepath ?>/lib/js/baffle.min.js" type="text/javascript"></script>
+	
+	<!-- load and instantiate ScrollReveal (module animation) first -->
+    <script src="<?php echo $filepath ?>/lib/js/scrollreveal.min-400.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.sr = ScrollReveal();
+    </script>
+	
 </head>
 
 <body style="font-size:<?php echo $fontSize ; ?>;color : #<?php echo $this->params->get('color_text_general') ; ?>;font-family: '<?php echo str_replace($space_font_name," ",substr($font_content,0,sep_font($font_content)) ) ; ?>', sans-serif;"  class=" <?php if ( $this->params->get('uppercase') == 'yes') : ?>text-uppercase<?php endif ; ?> <?php echo $this->params->get('border_image') ; ?>">
@@ -224,7 +233,7 @@ foreach ($googleFonts as $loadFont) {
 		
 			<!--	SOCIAL LINKS	-->
 			<?php if( ( $this->params->get('$google1') == 'yes') || ($this->params->get('twitter') != '') || ($this->params->get('facebook') != '') || ($this->params->get('rss') != '') || ($this->params->get('linkedin') != '') || ($this->params->get('google') != '') || ($this->params->get('instagram') != '') || ($this->params->get('pinterest') != '') || ($this->params->get('renren') != '') || ($this->params->get('weibo') != '') || ($this->params->get('flickr') != '') || ($this->params->get('xing') != '') || ($this->params->get('youtube') != '') || ($this->params->get('vimeo') != '') || ($this->params->get('tumblr') != '') || ($this->params->get('custom_icon01') != '') ) : ?>
-			<div class="social-links" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_social') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_social_text') ; ?>"<?php endif; ?> >
+			<div class="social-links <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_social') == 'yes' ) : ?>load-hidden<?php endif; ?>" >
 		
 				<?php if ( $this->params->get('text_social_icons') != '') : ?>
 				<span class="text_social_icons hidden-phone" style="color:#<?php echo $this->params->get('color_text_social') ; ?>;"><?php echo $this->params->get('text_social_icons') ; ?></span>
@@ -303,12 +312,12 @@ foreach ($googleFonts as $loadFont) {
 			<?php endif; ?>
 
 			<?php if($this->countModules('translate')) : ?>
-			<div id="translate" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_translate') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_translate_text') ; ?>"<?php endif; ?> >
+			<div id="translate" >
 				<jdoc:include type="modules" name="translate" style="joomspirit" />
 			</div>	
 			<?php endif; ?>
 			
-			<div class="logo-module zindex10 <?php echo $this->params->get('logo_position') ; ?>" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_logo') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_logo_text') ; ?>"<?php endif; ?> >
+			<div class="logo-module <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_logo') == 'yes' ) : ?>load-hidden <?php endif; ?>zindex10 <?php echo $this->params->get('logo_position') ; ?>" >
 			<?php if($this->countModules('logo')) : ?>
 				<jdoc:include type="modules" name="logo" style="joomspirit" />
 			<?php else : ?>
@@ -317,7 +326,7 @@ foreach ($googleFonts as $loadFont) {
 			</div>			
 	
 			<?php if($this->countModules('menu')) : ?>
-			<nav id="js_navigation" class=" zindex30 drop-down clearfix " role="navigation" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_menu') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_menu_text') ; ?>"<?php endif; ?> >
+			<nav id="js_navigation" class=" zindex30 drop-down clearfix " role="navigation" >
 				
 				<span class="title_menu">
 					<a href="#js_navigation"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/icon-menu.png" alt="" class="icone-menu" /><?php echo $this->params->get('text_menu') ; ?></a>
@@ -336,7 +345,7 @@ foreach ($googleFonts as $loadFont) {
 
 
 	<?php if($this->countModules('image')) : ?>
-	<aside class="image-module zindex10" role="complementary" >
+	<aside class="image-module <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_image') == 'yes' ) : ?>load-hidden <?php endif; ?> zindex10" role="complementary" >
 	
 		<div class="wrapper-website zindex10">		
 			<jdoc:include type="modules" name="image" style="joomspirit" />
@@ -353,25 +362,25 @@ foreach ($googleFonts as $loadFont) {
 		<div class="wrapper-website zindex10">
 	
 			<?php if($this->countModules('breadcrumb')) : ?>
-			<nav class="module-breadcrumb zindex10" role="navigation" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_breadcrumb') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_breadcrumb_text') ; ?>"<?php endif; ?> >
+			<nav class="module-breadcrumb zindex10<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_breadcrumb') == 'yes' ) : ?> load-hidden<?php endif; ?>" role="navigation"  >
 				<jdoc:include type="modules" name="breadcrumb" style="xhtml" />
 			</nav>
 			<?php endif; ?>
 		
 			<?php if($this->countModules('top')) : ?>
-			<aside class="top-module-position" role="complementary" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_top') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_top_text') ; ?>"<?php endif; ?> >
+			<aside class="top-module-position<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_top') == 'yes' ) : ?> load-hidden<?php endif; ?>" role="complementary" >
 				<jdoc:include type="modules" name="top" style="joomspirit" />
 			</aside>
 			<?php endif; ?>	
 			
 			<?php if($this->countModules('left')) : ?>
-			<aside class="left_column <?php if ( $this->params->get('column_responsive') == 'yes' && $this->params->get('responsive') == 'yes' ) : ?>visible-desktop<?php endif; ?>" role="complementary" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_left') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_left_text') ; ?>"<?php endif; ?> >
+			<aside class="left_column <?php if ( $this->params->get('column_responsive') == 'yes' && $this->params->get('responsive') == 'yes' ) : ?>visible-desktop<?php endif; ?> <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_left') == 'yes' ) : ?>load-hidden<?php endif; ?>" role="complementary" >
 				<jdoc:include type="modules" name="left" style="joomspirit" />
 			</aside>
 			<?php endif; ?>
 			
 			<?php if( $this->countModules('right') ) : ?>
-			<aside class="right_column <?php if ( $this->params->get('column_responsive') == 'yes' && $this->params->get('responsive') == 'yes' ) : ?>visible-desktop<?php endif; ?>" role="complementary" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_right') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_right_text') ; ?>"<?php endif; ?> >
+			<aside class="right_column <?php if ( $this->params->get('column_responsive') == 'yes' && $this->params->get('responsive') == 'yes' ) : ?>visible-desktop<?php endif; ?> <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_right') == 'yes' ) : ?>load-hidden<?php endif; ?>" role="complementary" >
 				<jdoc:include type="modules" name="right" style="joomspirit" />
 			</aside>
 			<?php endif; ?>				
@@ -384,19 +393,19 @@ foreach ($googleFonts as $loadFont) {
 				<aside class="users_top clearfix" role="complementary" >
 															
 					<?php if($this->countModules('user1')) : ?>
-					<div class="user1" <?php echo ('style="width:'.$this->params->get('user1_width').'%;"');?> <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user1') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_user1_text') ; ?>"<?php endif; ?> >
+					<div class="user1 <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user1') == 'yes' ) : ?>load-hidden<?php endif; ?>" <?php echo ('style="width:'.$this->params->get('user1_width').'%;"');?> >
 						<jdoc:include type="modules" name="user1" style="joomspirit" />
 					</div>
 					<?php endif; ?>
 										
 					<?php if($this->countModules('user3')) : ?>
-					<div class="user3" <?php echo ('style="width:'.$this->params->get('user3_width').'%;"');?> <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user3') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_user3_text') ; ?>"<?php endif; ?> >
+					<div class="user3 <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user3') == 'yes' ) : ?>load-hidden<?php endif; ?>" <?php echo ('style="width:'.$this->params->get('user3_width').'%;"');?> >
 						<jdoc:include type="modules" name="user3" style="joomspirit" />
 					</div>
 					<?php endif; ?>
 				
 					<?php if($this->countModules('user2')) : ?>
-					<div class="user2" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user2') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_user2_text') ; ?>"<?php endif; ?> >
+					<div class="user2 <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user2') == 'yes' ) : ?>load-hidden<?php endif; ?>" >
 						<jdoc:include type="modules" name="user2" style="joomspirit" />
 					</div>
 					<?php endif; ?>
@@ -404,7 +413,7 @@ foreach ($googleFonts as $loadFont) {
 				</aside>
 				<?php endif; ?>  <!--	END OF USERS TOP	-->
 			
-				<div class="main_component clearfix" role="main" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_article') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_article_text') ; ?>"<?php endif; ?> >
+				<div class="main_component <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_article') == 'yes' ) : ?>load-hidden<?php endif; ?> clearfix" role="main" >
 	
 					<!--  MAIN COMPONENT -->
 					<jdoc:include type="message" />
@@ -417,19 +426,19 @@ foreach ($googleFonts as $loadFont) {
 				<aside class="users_bottom clearfix" role="complementary" >
 															
 					<?php if($this->countModules('user4')) : ?>
-					<div class="user4" <?php echo ('style="width:'.$this->params->get('user4_width').'%;"');?> <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user4') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_user4_text') ; ?>"<?php endif; ?> >
+					<div class="user4 <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user4') == 'yes' ) : ?>load-hidden<?php endif; ?>" <?php echo ('style="width:'.$this->params->get('user4_width').'%;"');?> >
 						<jdoc:include type="modules" name="user4" style="joomspirit" />
 					</div>
 					<?php endif; ?>
 										
 					<?php if($this->countModules('user6')) : ?>
-					<div class="user6" <?php echo ('style="width:'.$this->params->get('user6_width').'%;"');?> <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user6') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_user6_text') ; ?>"<?php endif; ?> >
+					<div class="user6 <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user6') == 'yes' ) : ?>load-hidden<?php endif; ?>" <?php echo ('style="width:'.$this->params->get('user6_width').'%;"');?> >
 						<jdoc:include type="modules" name="user6" style="joomspirit" />
 					</div>
 					<?php endif; ?>
 				
 					<?php if($this->countModules('user5')) : ?>
-					<div class="user5" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user5') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_user5_text') ; ?>"<?php endif; ?> >
+					<div class="user5 <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user5') == 'yes' ) : ?>load-hidden<?php endif; ?>" >
 						<jdoc:include type="modules" name="user5" style="joomspirit" />
 					</div>
 					<?php endif; ?>
@@ -442,19 +451,19 @@ foreach ($googleFonts as $loadFont) {
 			</div>	  <!--	END OF MAIN CONTENT 	-->
 				
 			<?php if( ($this->countModules('left')) && ( $this->params->get('column_responsive') == 'yes') && ( $this->params->get('responsive') == 'yes') ) : ?> 				<!-- Left and right column are duplicate to modify the order on mobiles devices 	-->
-			<aside class="left_column hidden-desktop" role="complementary" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_left') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_left_text') ; ?>"<?php endif; ?> >
+			<aside class="left_column hidden-desktop <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_left') == 'yes' ) : ?>load-hidden<?php endif; ?>" role="complementary" >
 				<jdoc:include type="modules" name="left" style="joomspirit" />			
 			</aside>
 			<?php endif; ?>
 			
 			<?php if( ($this->countModules('right')) && ( $this->params->get('column_responsive') == 'yes') && ( $this->params->get('responsive') == 'yes') ) : ?>
-			<aside class="right_column hidden-desktop" role="complementary" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_right') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_right_text') ; ?>"<?php endif; ?> >
+			<aside class="right_column hidden-desktop <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_right') == 'yes' ) : ?>load-hidden<?php endif; ?>" role="complementary" >
 				<jdoc:include type="modules" name="right" style="joomspirit" />			
 			</aside>
 			<?php endif; ?>
 		
 			<?php if($this->countModules('bottom')) : ?>
-			<aside class="bottom-module-position" role="complementary" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_bottom_text') ; ?>"<?php endif; ?> >
+			<aside class="bottom-module-position <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom') == 'yes' ) : ?>load-hidden<?php endif; ?>" role="complementary" >
 				<jdoc:include type="modules" name="bottom" style="joomspirit" />
 			</aside>
 			<?php endif; ?>
@@ -470,20 +479,20 @@ foreach ($googleFonts as $loadFont) {
 		<div class="wrapper-website zindex10">			
 					
 			<?php if ($this->countModules( 'search' )) : ?>
-			<div id="search" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_search') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_search_text') ; ?>"<?php endif; ?> >
+			<div id="search" >
 				<jdoc:include type="modules" name="search" style="joomspirit" />
 			</div>	
 			<?php endif; ?>		
-	
+
 			<!--	bottom nav	-->
 			<?php if ($this->countModules( 'bottom_menu' )) : ?>
-			<nav class="bottom_menu <?php if (! $this->countModules( 'address' )) : ?>without_address<?php endif ; ?>" role="navigation" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom_menu') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_bottom_menu_text') ; ?>"<?php endif; ?> >
+			<nav class="bottom_menu <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom_menu') == 'yes' ) : ?>load-hidden<?php endif; ?> <?php if (! $this->countModules( 'address' )) : ?>without_address<?php endif ; ?>" role="navigation" >
 				<jdoc:include type="modules" name="bottom_menu" style="joomspirit" />
 			</nav>
 			<?php endif; ?>
 	
 			<?php if($this->countModules('address')) : ?>
-			<div class="address <?php if ( (! $this->countModules( 'bottom_menu' )) && (! $this->countModules( 'search' )) ) : ?>without_bottom_menu<?php endif ; ?>" <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_address') == 'yes' ) : ?>data-scroll-reveal="<?php echo $this->params->get('animation_address_text') ; ?>"<?php endif; ?> >
+			<div class="address <?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_address') == 'yes' ) : ?>load-hidden<?php endif; ?> <?php if ( (! $this->countModules( 'bottom_menu' )) && (! $this->countModules( 'search' )) ) : ?>without_bottom_menu<?php endif ; ?>" >
 				<jdoc:include type="modules" name="address" style="joomspirit" />
 			</div>
 			<?php endif; ?>			
@@ -543,14 +552,73 @@ foreach ($googleFonts as $loadFont) {
 	<?php endif; ?>
 
 	<?php if ( (! preg_match("/MSIE 7/", $_SERVER['HTTP_USER_AGENT'])) && (! preg_match("/MSIE 8/", $_SERVER['HTTP_USER_AGENT'])) && ($this->params->get('animation') == 'yes' ) ) : ?>
-		<script src="<?php echo $filepath ?>/lib/js/scrollReveal.min.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			var config = {
-      			viewportFactor: 0
-    			};
-			window.scrollReveal = new scrollReveal(config);
+			function baffleSelection(e) {
+				let b = baffle(e);
+				b.start()
+					.set({ speed: 40 })
+					.reveal(0,1000);
+			}
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_social') == 'yes' ) : ?>
+				sr.reveal('.social-links', { <?php echo $this->params->get('animation_social_text'); ?> });
+				sr.reveal('.text_social_icons', { <?php echo $this->params->get('animation_social_text'); ?>, afterReveal:function(){baffleSelection('.text_social_icons');} });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_translate') == 'yes' ) : ?>
+					sr.reveal('#translate', { <?php echo $this->params->get('animation_translate_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_logo') == 'yes' ) : ?>
+				sr.reveal('.logo-module', { <?php echo $this->params->get('animation_logo_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_image') == 'yes' ) : ?>
+				sr.reveal('.image-module', { <?php echo $this->params->get('animation_image_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_breadcrumb') == 'yes' ) : ?>
+					sr.reveal('.module-breadcrumb', { <?php echo $this->params->get('animation_breadcrumb_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_top') == 'yes' ) : ?>
+				sr.reveal('.top-module-position', { <?php echo $this->params->get('animation_top_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_left') == 'yes' ) : ?>
+				sr.reveal('.left_column', { <?php echo $this->params->get('animation_left_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user1') == 'yes' ) : ?>
+				sr.reveal('.user1', { <?php echo $this->params->get('animation_user1_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user2') == 'yes' ) : ?>
+				sr.reveal('.user2', { <?php echo $this->params->get('animation_user2_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user3') == 'yes' ) : ?>
+				sr.reveal('.user3', { <?php echo $this->params->get('animation_user3_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_right') == 'yes' ) : ?>
+				sr.reveal('.right_column', { <?php echo $this->params->get('animation_right_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_article') == 'yes' ) : ?>
+				sr.reveal('.main_component', { <?php echo $this->params->get('animation_article_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user4') == 'yes' ) : ?>
+				sr.reveal('.user4', { <?php echo $this->params->get('animation_user4_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user5') == 'yes' ) : ?>
+				sr.reveal('.user5', { <?php echo $this->params->get('animation_user5_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user6') == 'yes' ) : ?>
+				sr.reveal('.user6', { <?php echo $this->params->get('animation_user6_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom') == 'yes' ) : ?>
+				sr.reveal('.bottom-module-position', { <?php echo $this->params->get('animation_bottom_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_address') == 'yes' ) : ?>
+				sr.reveal('.address', { <?php echo $this->params->get('animation_address_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom_menu') == 'yes' ) : ?>
+				sr.reveal('.bottom_menu', { <?php echo $this->params->get('animation_bottom_menu_text'); ?> });
+			<?php endif ; ?>
+			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_search') == 'yes' ) : ?>
+					sr.reveal('#search', { <?php echo $this->params->get('animation_search_text'); ?>, beforeReset:function(){sr.sync()} });
+			<?php endif ; ?>
 		</script>
 	<?php endif ; ?>
-
+	
 </body>
 </html>

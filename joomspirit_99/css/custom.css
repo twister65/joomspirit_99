@@ -3,3 +3,8 @@
 		CUSTOM CSS
 
 ******************************************/
+
+/**			Load-hidden			**/
+html.sr .load-hidden {
+	visibility: hidden;
+}
