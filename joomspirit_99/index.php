@@ -213,7 +213,7 @@ foreach ($googleFonts as $loadFont) {
 	<!-- Bootstrap 3 js 		-->
 	<script type="text/javascript" src="<?php echo $filepath ?>/lib/js/bootstrap.min.js"></script>
 
-	<!-- load Baffle 3 (text animation) -->
+	<!-- load Baffle 3 (text shuffle effect) -->
 	<script src="<?php echo $filepath ?>/lib/js/baffle.min.js" type="text/javascript"></script>
 	
 	<!-- load and instantiate ScrollReveal (module animation) first -->
@@ -221,6 +221,9 @@ foreach ($googleFonts as $loadFont) {
     <script type="text/javascript">
       window.sr = ScrollReveal();
     </script>
+	
+	<!-- load jquery-plate (mouse 3D hover effect) -->
+	<script src="<?php echo $filepath ?>/lib/js/jquery.plate.js" type="text/javascript"></script>
 	
 </head>
 
@@ -512,6 +515,16 @@ foreach ($googleFonts as $loadFont) {
 	<?php // Google Analytics Tracking Code
 	if( $this->params->get('google_code') ) {echo '<script type="text/javascript">'; echo $this->params->get('google_code') ; echo '</script>';}?>
 	
+	<?php if ( $this->params->get('hover3d') == 'yes' ) : ?>
+	<script src="<?php echo $filepath ?>/lib/js/jquery.hover3d.js" ></script>
+	<script type="text/javascript">
+	jQuery(".hover3d").hover3d({
+			selector: ".hover3d-card",
+			invert: true,
+		});
+	</script>
+	<?php endif; ?>
+	
 	<?php if ( $this->params->get('sticky_menu') == 'yes') : ?>
 	<script src="<?php echo $filepath ?>/lib/js/stickUp.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -568,9 +581,11 @@ foreach ($googleFonts as $loadFont) {
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_logo') == 'yes' ) : ?>
 				sr.reveal('.logo-module', { <?php echo $this->params->get('animation_logo_text'); ?> });
+				jQuery('.logo-module').plate({ <?php echo $this->params->get('plate_logo_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_image') == 'yes' ) : ?>
 				sr.reveal('.image-module', { <?php echo $this->params->get('animation_image_text'); ?> });
+				jQuery('.image-module').plate({ <?php echo $this->params->get('plate_image_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_breadcrumb') == 'yes' ) : ?>
 					sr.reveal('.module-breadcrumb', { <?php echo $this->params->get('animation_breadcrumb_text'); ?> });
@@ -580,33 +595,42 @@ foreach ($googleFonts as $loadFont) {
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_left') == 'yes' ) : ?>
 				sr.reveal('.left_column', { <?php echo $this->params->get('animation_left_text'); ?> });
+				jQuery('.left_column').plate({ <?php echo $this->params->get('plate_left_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user1') == 'yes' ) : ?>
 				sr.reveal('.user1', { <?php echo $this->params->get('animation_user1_text'); ?> });
+				jQuery('.user1').plate({ <?php echo $this->params->get('plate_user1_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user2') == 'yes' ) : ?>
 				sr.reveal('.user2', { <?php echo $this->params->get('animation_user2_text'); ?> });
+				jQuery('.user2').plate({ <?php echo $this->params->get('plate_user2_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user3') == 'yes' ) : ?>
 				sr.reveal('.user3', { <?php echo $this->params->get('animation_user3_text'); ?> });
+				jQuery('.user3').plate({ <?php echo $this->params->get('plate_user3_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_right') == 'yes' ) : ?>
 				sr.reveal('.right_column', { <?php echo $this->params->get('animation_right_text'); ?> });
+				jQuery('.right_column').plate({ <?php echo $this->params->get('plate_right_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_article') == 'yes' ) : ?>
 				sr.reveal('.main_component', { <?php echo $this->params->get('animation_article_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user4') == 'yes' ) : ?>
 				sr.reveal('.user4', { <?php echo $this->params->get('animation_user4_text'); ?> });
+				jQuery('.user4').plate({ <?php echo $this->params->get('plate_user4_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user5') == 'yes' ) : ?>
 				sr.reveal('.user5', { <?php echo $this->params->get('animation_user5_text'); ?> });
+				jQuery('.user5').plate({ <?php echo $this->params->get('plate_user5_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user6') == 'yes' ) : ?>
 				sr.reveal('.user6', { <?php echo $this->params->get('animation_user6_text'); ?> });
+				jQuery('.user6').plate({ <?php echo $this->params->get('plate_user6_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom') == 'yes' ) : ?>
 				sr.reveal('.bottom-module-position', { <?php echo $this->params->get('animation_bottom_text'); ?> });
+				jQuery('.bottom-module-position').plate({ <?php echo $this->params->get('plate_bottom_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_address') == 'yes' ) : ?>
 				sr.reveal('.address', { <?php echo $this->params->get('animation_address_text'); ?> });
