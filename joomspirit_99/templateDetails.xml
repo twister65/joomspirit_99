@@ -88,6 +88,11 @@
 					<option value="js-border">Yes</option>			
 					<option value="no-js-border">No</option>
 				</field>
+				
+				<field name="hover3d" type="list" default="no" label="Enable the script Hover3d for the image effect" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
 			
 		</fieldset>
 		
@@ -468,7 +473,9 @@
 		
 		<fieldset name="08" label="Animations">
 			
-			<field name="docsr" type="note" class="alert alert-info" close="true" label="To customize animations, see ScrollReveal documentation :" description="https://scrollrevealjs.org/api/defaults.html"/>
+			<field name="docsr" type="note" class="alert alert-info" close="true" label="To animate elements as they scroll into view, see ScrollReveal documentation :" description="https://scrollrevealjs.org/api/defaults.html"/>
+			
+			<field name="plate_options" type="note" class="alert alert-info" close="true" label="To customize 3D hover effect, see jQuery Plate documentation :" description="https://github.com/krebszattila/jquery-plate#options"/>
 			
 			<field name="animation" type="radio" default="yes" label="Enable animations for the modules positions" description="Disable this option if you doesn't want use any animation on scroll">				
 				<option value="yes">Yes</option>
@@ -482,7 +489,7 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_social_text" type="text" default="origin:'top', distance:'20px', duration:1330, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'top', distance:'20px', duration:1330, reset:true" />
+			<field name="animation_social_text" type="text" default="origin:'top', distance:'20px', duration:1330, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance:'20px', duration:1330, reset:true" />
 			
 			<field type="spacer" label="Translate" />
 			
@@ -491,7 +498,7 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_translate_text" type="text" default="origin:'top', distance:'20px', duration:1330, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'top', distance:'20px', duration:1330, reset:true" />			
+			<field name="animation_translate_text" type="text" default="origin:'top', distance:'20px', duration:1330, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance:'20px', duration:1330, reset:true" />			
 
 			<field type="spacer" label="Logo" />
 			
@@ -500,7 +507,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_logo_text" type="text" default="origin:'top', distance:'100px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.2, duration:1000, delay:100, rotate:{x:90}, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'top', distance:'100px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.2, duration:1000, delay:100, rotate:{x:90}, reset:true" />
+			<field name="animation_logo_text" type="text" default="origin:'top', distance:'100px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.2, duration:1000, delay:100, rotate:{x:90}, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance:'100px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.2, duration:1000, delay:100, rotate:{x:90}, reset:true" />
+			
+			<field name="plate_logo_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 
 			<field type="spacer" label="Image" />
 			
@@ -509,8 +518,10 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_image_text" type="text" default="duration:1000, rotate:{y:90}, reset:true" size="30" label="Customize this effect" description="Default effect = duration:1000, rotate:{y:90}, reset:true" />
-						
+			<field name="animation_image_text" type="text" default="duration:1000, rotate:{y:90}, reset:true" size="30" label="ScrollReveal effect" description="Default effect = duration:1000, rotate:{y:90}, reset:true" />
+			
+			<field name="plate_image_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
+			
 			<field type="spacer" label="Breadcrumb" />
 			
 			<field name="animation_breadcrumb" type="radio" default="yes" label="Enable animation for Breadcrumb" description="">				
@@ -518,7 +529,7 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_breadcrumb_text" type="text" default="easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" size="30" label="Customize this effect" description="Default effect = easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" />
+			<field name="animation_breadcrumb_text" type="text" default="easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" size="30" label="ScrollReveal effect" description="Default effect = easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" />
 							
 			<field type="spacer" label="Left column" />
 			
@@ -527,7 +538,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_left_text" type="text" default="origin:'left', distance:'50px', duration:1330" size="30" label="Customize this effect" description="Default effect = origin:'left', distance:'50px', duration:1330" />
+			<field name="animation_left_text" type="text" default="origin:'left', distance:'50px', duration:1330" size="30" label="ScrollReveal effect" description="Default effect = origin:'left', distance:'50px', duration:1330" />
+			
+			<field name="plate_left_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="Right column" />
 			
@@ -536,7 +549,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_right_text" type="text" default="origin:'right', distance:'50px', duration:1330" size="30" label="Customize this effect" description="Default effect = origin:'right', distance:'50px', duration:1330" />
+			<field name="animation_right_text" type="text" default="origin:'right', distance:'50px', duration:1330" size="30" label="ScrollReveal effect" description="Default effect = origin:'right', distance:'50px', duration:1330" />
+			
+			<field name="plate_right_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="Top" />
 			
@@ -545,7 +560,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_top_text" type="text" default="origin:'bottom', distance:'50px', duration:1330, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'bottom', distance:'50px', duration:1330, reset:true" />
+			<field name="animation_top_text" type="text" default="origin:'bottom', distance:'50px', duration:1330, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', duration:1330, reset:true" />
+			
+			<field name="plate_top_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="User1" />
 			
@@ -554,7 +571,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_user1_text" type="text" default="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
+			<field name="animation_user1_text" type="text" default="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
+			
+			<field name="plate_user1_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="User2" />
 			
@@ -563,7 +582,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_user2_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, delay:600, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, delay:600, reset:true" />
+			<field name="animation_user2_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, delay:600, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, delay:600, reset:true" />
+			
+			<field name="plate_user2_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="User3" />
 			
@@ -572,7 +593,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_user3_text" type="text" default="origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" size="30" label="Customize this effect" description="Default effect = origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" />
+			<field name="animation_user3_text" type="text" default="origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" size="30" label="ScrollReveal effect" description="Default effect = origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" />
+			
+			<field name="plate_user3_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="Article" />
 			
@@ -581,8 +604,8 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_article_text" type="text" default="origin:'top', distance: '50px', duration:1330" size="30" label="Customize this effect" description="Default effect = origin:'top', distance: '50px', duration:1330" />
-			
+			<field name="animation_article_text" type="text" default="origin:'top', distance: '50px', duration:1330" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance: '50px', duration:1330" />
+		
 			<field type="spacer" label="User4" />
 			
 			<field name="animation_user4" type="radio" default="yes" label="Enable animation for User4" description="">				
@@ -590,7 +613,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_user4_text" type="text" default="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="Customize this effect" description="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
+			<field name="animation_user4_text" type="text" default="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="ScrollReveal effect" description="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
+			
+			<field name="plate_user4_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="User5" />
 			
@@ -599,7 +624,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_user5_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
+			<field name="animation_user5_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
+			
+			<field name="plate_user5_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="User6" />
 			
@@ -608,7 +635,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_user6_text" type="text" default="origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" size="30" label="Customize this effect" description="Default effect = origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" />
+			<field name="animation_user6_text" type="text" default="origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" size="30" label="ScrollReveal effect" description="Default effect = origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" />
+			
+			<field name="plate_user6_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
 			<field type="spacer" label="Bottom" />
 			
@@ -617,8 +646,10 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_bottom_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
+			<field name="animation_bottom_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
 
+			<field name="plate_bottom_text" type="text" default="inverse: true, perspective: 0, maxRotation: 0, animationDuration: 0" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 0, maxRotation: 0, animationDuration: 0" />
+			
 			<field type="spacer" label="Search" />
 			
 			<field name="animation_search" type="radio" default="yes" label="Enable animation for Search" description="">				
@@ -626,7 +657,7 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_search_text" type="text" default="easing:'ease-in-out', scale:0.5, duration:1500, reset:true" size="30" label="Customize this effect" description="Default effect = easing:'ease-in-out', scale:0.5, duration:1500, reset:true" />
+			<field name="animation_search_text" type="text" default="easing:'ease-in-out', scale:0.5, duration:1500, reset:true" size="30" label="ScrollReveal effect" description="Default effect = easing:'ease-in-out', scale:0.5, duration:1500, reset:true" />
 
 			<field type="spacer" label="Address" />
 			
@@ -635,7 +666,7 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_address_text" type="text" default="origin:'left', distance:'20px', duration:1000, reset:true" size="30" label="Customize this effect" description="Default effect = origin:'left', distance:'20px', duration:1000, reset:true" />
+			<field name="animation_address_text" type="text" default="origin:'left', distance:'20px', duration:1000, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'left', distance:'20px', duration:1000, reset:true" />
 			
 			<field type="spacer" label="Bottom_menu" />
 			
@@ -644,7 +675,7 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_bottom_menu_text" type="text" default="easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" size="30" label="Customize this effect" description="Default effect = easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" />
+			<field name="animation_bottom_menu_text" type="text" default="easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" size="30" label="ScrollReveal effect" description="Default effect = easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" />
 				
 		</fieldset>		
 		
