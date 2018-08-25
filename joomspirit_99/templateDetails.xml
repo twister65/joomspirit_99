@@ -646,9 +646,9 @@
 				<option value="no">No</option>
 			</field>
 			
-			<field name="animation_bottom_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
+			<field name="animation_bottom_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true, beforeReset:function(){sr.sync()}" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true, beforeReset:function(){sr.sync()}" />
 
-			<field name="plate_bottom_text" type="text" default="inverse: true, perspective: 0, maxRotation: 0, animationDuration: 0" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 0, maxRotation: 0, animationDuration: 0" />
+			<field name="plate_bottom_text" type="text" default="perspective: 0, maxRotation: 0, animationDuration: 0" size="30" label="Plate effect" description="Default effect = perspective: 0, maxRotation: 0, animationDuration: 0" />
 			
 			<field type="spacer" label="Search" />
 			

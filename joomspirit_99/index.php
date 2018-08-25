@@ -639,7 +639,7 @@ foreach ($googleFonts as $loadFont) {
 				sr.reveal('.bottom_menu', { <?php echo $this->params->get('animation_bottom_menu_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_search') == 'yes' ) : ?>
-					sr.reveal('#search', { <?php echo $this->params->get('animation_search_text'); ?>, beforeReset:function(){sr.sync()} });
+					sr.reveal('#search', { <?php echo $this->params->get('animation_search_text'); ?> });
 			<?php endif ; ?>
 		</script>
 	<?php endif ; ?>
