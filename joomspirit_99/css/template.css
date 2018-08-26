@@ -1316,6 +1316,7 @@ font-size:82%;
 padding:6px 10px;
 }
 
+
 /**			Tables stripped & hover rows (override Bootstrap code) 		**/
 
 .table-striped > tbody > tr:nth-child(odd) > td,
@@ -1326,6 +1327,671 @@ background-color: rgba(0,0,0,0.04);;
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
 background-color: rgba(0,0,0,0.06);
+}
+
+
+/*****************************			COLORS 					****************************/
+/*
+[class*="color-"] {
+padding:18px;
+margin:14px 0;
+}
+*/
+.content-module [class*="color-"] {
+padding:0;
+margin:0;
+}
+
+[class*="color-"] .module-title h3 {
+color:inherit;
+}
+
+[class*="color-"] a {
+text-decoration: underline;
+}
+
+[class*="color-"] a:hover {
+text-decoration: none;
+}
+
+
+.color-white, .moduletable.color-white > div, .title-centered.color-white .module-title h3, .horizontal_menu.color-white li {
+background:#fff;
+}
+.color-peachpuff, .moduletable.color-peachpuff > div, .title-centered.color-peachpuff .module-title h3, .horizontal_menu.color-peachpuff li {
+background:#ffdab9;
+}
+.color-papayawhip, .moduletable.color-papayawhip > div, .title-centered.color-papayawhip .module-title h3, .horizontal_menu.color-papayawhip li {
+background:#ffefd5;
+}
+.color-moccasin, .moduletable.color-moccasin > div, .title-centered.color-moccasin .module-title h3, .horizontal_menu.color-moccasin li {
+background:#ffe4b5;
+}
+.color-goldenrod, .moduletable.color-goldenrod > div, .title-centered.color-goldenrod .module-title h3, .horizontal_menu.color-goldenrod li {
+background:#daa520;
+}
+.color-gold, .moduletable.color-gold > div, .title-centered.color-gold .module-title h3, .horizontal_menu.color-gold li {
+background:#ffd700;
+}
+.color-khaki, .moduletable.color-khaki > div, .title-centered.color-khaki .module-title h3, .horizontal_menu.color-khaki li {
+background:#f0e68c;
+}
+.color-lemonchiffon, .moduletable.color-lemonchiffon > div, .title-centered.color-lemonchiffon .module-title h3, .horizontal_menu.color-lemonchiffon li {
+background:#fffacd;
+}
+.color-palegoldenrod, .moduletable.color-palegoldenrod > div, .title-centered.color-palegoldenrod .module-title h3, .horizontal_menu.color-palegoldenrod li {
+background:#eee8aa;
+}
+.color-darkkhaki, .moduletable.color-darkkhaki > div, .title-centered.color-darkkhaki .module-title h3, .horizontal_menu.color-darkkhaki li {
+background:#bdb76b;
+}
+.color-yellow, .moduletable.color-yellow > div, .title-centered.color-yellow .module-title h3, .horizontal_menu.color-yellow li {
+background:#ffff00;
+}
+.color-lightgoldenrodyellow, .moduletable.color-lightgoldenrodyellow > div, .title-centered.color-lightgoldenrodyellow .module-title h3, .horizontal_menu.color-lightgoldenrodyellow li {
+background:#fafad2;
+}
+.color-lightyellow, .moduletable.color-lightyellow > div, .title-centered.color-lightyellow .module-title h3, .horizontal_menu.color-lightyellow li {
+background:#ffffe0;
+}
+.color-darkcyan, .moduletable.color-darkcyan > div, .title-centered.color-darkcyan .module-title h3, .horizontal_menu.color-darkcyan li {
+background:#008b8b;
+}
+.color-cyan, .moduletable.color-cyan > div, .title-centered.color-cyan .module-title h3, .horizontal_menu.color-cyan li {
+background:#00ffff;
+}
+.color-teal, .moduletable.color-teal > div, .title-centered.color-teal .module-title h3, .horizontal_menu.color-teal li {
+background:#008080;
+}
+.color-lightcyan, .moduletable.color-lightcyan > div, .title-centered.color-lightcyan .module-title h3, .horizontal_menu.color-lightcyan li {
+background:#e0ffff;
+}
+.color-olive, .moduletable.color-olive > div, .title-centered.color-olive .module-title h3, .horizontal_menu.color-olive li {
+background:#808000;
+}
+.color-olivedrab, .moduletable.color-olivedrab > div, .title-centered.color-olivedrab .module-title h3, .horizontal_menu.color-olivedrab li {
+background:#6b8e23;
+}
+.color-yellowgreen, .moduletable.color-yellowgreen > div, .title-centered.color-yellowgreen .module-title h3, .horizontal_menu.color-yellowgreen li {
+background:#9ACD32;
+}
+.color-darkolivegreen, .moduletable.color-darkolivegreen > div, .title-centered.color-darkolivegreen .module-title h3, .horizontal_menu.color-darkolivegreen li {
+background:#556b2f;
+}
+.color-greenyellow, .moduletable.color-greenyellow > div, .title-centered.color-greenyellow .module-title h3, .horizontal_menu.color-greenyellow li {
+background:#adff2f;
+}
+.color-chartreuse, .moduletable.color-chartreuse > div, .title-centered.color-chartreuse .module-title h3, .horizontal_menu.color-chartreuse li {
+background:#7fff00;
+}
+.color-lawngreen, .moduletable.color-lawngreen > div, .title-centered.color-lawngreen .module-title h3, .horizontal_menu.color-lawngreen li {
+background:#7cfc00;
+}
+.color-darkgreen, .moduletable.color-darkgreen > div, .title-centered.color-darkgreen .module-title h3, .horizontal_menu.color-darkgreen li {
+background:#006400;
+}
+.color-green, .moduletable.color-green > div, .title-centered.color-green .module-title h3, .horizontal_menu.color-green li {
+background:#008000;
+}
+.color-forestgreen, .moduletable.color-forestgreen > div, .title-centered.color-forestgreen .module-title h3, .horizontal_menu.color-forestgreen li {
+background:#228b22;
+}
+.color-lime, .moduletable.color-lime > div, .title-centered.color-lime .module-title h3, .horizontal_menu.color-lime li {
+background:#00ff00;
+}
+.color-limegreen, .moduletable.color-limegreen > div, .title-centered.color-limegreen .module-title h3, .horizontal_menu.color-limegreen li {
+background:#32cd32;
+}
+.color-lightgreen, .moduletable.color-lightgreen > div, .title-centered.color-lightgreen .module-title h3, .horizontal_menu.color-lightgreen li {
+background:#90ee90;
+}
+.color-palegreen, .moduletable.color-palegreen > div, .title-centered.color-palegreen .module-title h3, .horizontal_menu.color-palegreen li {
+background:#98fb98;
+}
+.color-darkseagreen, .moduletable.color-darkseagreen > div, .title-centered.color-darkseagreen .module-title h3, .horizontal_menu.color-darkseagreen li {
+background:#8fbc8f;
+}
+.color-seagreen, .moduletable.color-seagreen > div, .title-centered.color-seagreen .module-title h3, .horizontal_menu.color-seagreen li {
+background:#2e8b57;
+}
+.color-mediumseagreen, .moduletable.color-mediumseagreen > div, .title-centered.color-mediumseagreen .module-title h3, .horizontal_menu.color-mediumseagreen li {
+background:#3cb371;
+}
+.color-springgreen, .moduletable.color-springgreen > div, .title-centered.color-springgreen .module-title h3, .horizontal_menu.color-springgreen li {
+background:#00ff7f;
+}
+.color-mediumspringgreen, .moduletable.color-mediumspringgreen > div, .title-centered.color-mediumspringgreen .module-title h3, .horizontal_menu.color-mediumspringgreen li {
+background:#00fa9a;
+}
+.color-lightseagreen, .moduletable.color-lightseagreen > div, .title-centered.color-lightseagreen .module-title h3, .horizontal_menu.color-lightseagreen li {
+background:#20b2aa;
+}
+.color-mediumaquamarine, .moduletable.color-mediumaquamarine > div, .title-centered.color-mediumaquamarine .module-title h3, .horizontal_menu.color-mediumaquamarine li {
+background:#66cdaa;
+}
+.color-darkred, .moduletable.color-darkred > div, .title-centered.color-darkred .module-title h3, .horizontal_menu.color-darkred li {
+background:#8b0000;
+}
+.color-firebrick, .moduletable.color-firebrick > div, .title-centered.color-firebrick .module-title h3, .horizontal_menu.color-firebrick li {
+background:#b22222;
+}
+.color-red, .moduletable.color-red > div, .title-centered.color-red .module-title h3, .horizontal_menu.color-red li {
+background:#ff0000;
+}
+.color-indianred, .moduletable.color-indianred > div, .title-centered.color-indianred .module-title h3, .horizontal_menu.color-indianred li {
+background:#cd5c5c;
+}
+.color-lightcoral, .moduletable.color-lightcoral > div, .title-centered.color-lightcoral .module-title h3, .horizontal_menu.color-lightcoral li {
+background:#f08080;
+}
+.color-salmon, .moduletable.color-salmon > div, .title-centered.color-salmon .module-title h3, .horizontal_menu.color-salmon li {
+background:#fa8072;
+}
+.color-darksalmon, .moduletable.color-darksalmon > div, .title-centered.color-darksalmon .module-title h3, .horizontal_menu.color-darksalmon li {
+background:#e9967a;
+}
+.color-lightsalmon, .moduletable.color-lightsalmon > div, .title-centered.color-lightsalmon .module-title h3, .horizontal_menu.color-lightsalmon li {
+background:#ffa07a;
+}
+.color-crimson, .moduletable.color-crimson > div, .title-centered.color-crimson .module-title h3, .horizontal_menu.color-crimson li {
+background:#dc143c;
+}
+.color-deepskyblue, .moduletable.color-deepskyblue > div, .title-centered.color-deepskyblue .module-title h3, .horizontal_menu.color-deepskyblue li {
+background:#00bfff;
+}
+.color-blue, .moduletable.color-blue > div, .title-centered.color-blue .module-title h3, .horizontal_menu.color-blue li {
+background:#0000ff;
+}
+.color-aquamarine, .moduletable.color-aquamarine > div, .title-centered.color-aquamarine .module-title h3, .horizontal_menu.color-aquamarine li {
+background:#7fffd4;
+}
+.color-turquoise, .moduletable.color-turquoise > div, .title-centered.color-turquoise .module-title h3, .horizontal_menu.color-turquoise li {
+background:#40e0d0;
+}
+.color-mediumturquoise, .moduletable.color-mediumturquoise > div, .title-centered.color-mediumturquoise .module-title h3, .horizontal_menu.color-mediumturquoise li {
+background:#48d1cc;
+}
+.color-aqua, .moduletable.color-aqua > div, .title-centered.color-aqua .module-title h3, .horizontal_menu.color-aqua li {
+background:#00ffff;
+}
+.color-paleturquoise, .moduletable.color-paleturquoise > div, .title-centered.color-paleturquoise .module-title h3, .horizontal_menu.color-paleturquoise li {
+background:#afeeee;
+}
+.color-lightcyan, .moduletable.color-lightcyan > div, .title-centered.color-lightcyan .module-title h3, .horizontal_menu.color-lightcyan li {
+background:#e0ffff;
+}
+.color-darkturquoise, .moduletable.color-darkturquoise > div, .title-centered.color-darkturquoise .module-title h3, .horizontal_menu.color-darkturquoise li {
+background:#00ced1;
+}
+.color-cadetblue, .moduletable.color-cadetblue > div, .title-centered.color-cadetblue .module-title h3, .horizontal_menu.color-cadetblue li {
+background:#5f9ea0;
+}
+.color-powderblue, .moduletable.color-powderblue > div, .title-centered.color-powderblue .module-title h3, .horizontal_menu.color-powderblue li {
+background:#b0e0e6;
+}
+.color-lightblue, .moduletable.color-lightblue > div, .title-centered.color-lightblue .module-title h3, .horizontal_menu.color-lightblue li {
+background:#add8e6;
+}
+.color-skyblue, .moduletable.color-skyblue > div, .title-centered.color-skyblue .module-title h3, .horizontal_menu.color-skyblue li {
+background:#87ceeb;
+}
+.color-lightskyblue, .moduletable.color-lightskyblue > div, .title-centered.color-lightskyblue .module-title h3, .horizontal_menu.color-lightskyblue li {
+background:#87cefa;
+}
+.color-steelblue, .moduletable.color-steelblue > div, .title-centered.color-steelblue .module-title h3, .horizontal_menu.color-steelblue li {
+background:#4682b4;
+}
+.color-dodgerblue, .moduletable.color-dodgerblue > div, .title-centered.color-dodgerblue .module-title h3, .horizontal_menu.color-dodgerblue li {
+background:#1e90ff;
+}
+.color-lightsteelblue, .moduletable.color-lightsteelblue > div, .title-centered.color-lightsteelblue .module-title h3, .horizontal_menu.color-lightsteelblue li {
+background:#b0c4de;
+}
+.color-cornflowerblue, .moduletable.color-cornflowerblue > div, .title-centered.color-cornflowerblue .module-title h3, .horizontal_menu.color-cornflowerblue li {
+background:#6495ed;
+}
+.color-midnightblue, .moduletable.color-midnightblue > div, .title-centered.color-midnightblue .module-title h3, .horizontal_menu.color-midnightblue li {
+background:#191970;
+}
+.color-royalblue, .moduletable.color-royalblue > div, .title-centered.color-royalblue .module-title h3, .horizontal_menu.color-royalblue li {
+background:#4169e1;
+}
+.color-navy, .moduletable.color-navy > div, .title-centered.color-navy .module-title h3, .horizontal_menu.color-navy li {
+background:#000080;
+}
+.color-darkblue, .moduletable.color-darkblue > div, .title-centered.color-darkblue .module-title h3, .horizontal_menu.color-darkblue li {
+background:#00008b;
+}
+.color-mediumblue, .moduletable.color-mediumblue > div, .title-centered.color-mediumblue .module-title h3, .horizontal_menu.color-mediumblue li {
+background:#0000cd;
+}
+.color-mediumslateblue, .moduletable.color-mediumslateblue > div, .title-centered.color-mediumslateblue .module-title h3, .horizontal_menu.color-mediumslateblue li {
+background:#7b68ee;
+}
+.color-rebeccapurple, .moduletable.color-rebeccapurple > div, .title-centered.color-rebeccapurple .module-title h3, .horizontal_menu.color-rebeccapurple li {
+background:#663399;
+}
+.color-magenta, .moduletable.color-magenta > div, .title-centered.color-magenta .module-title h3, .horizontal_menu.color-magenta li {
+background:#ff00ff;
+}
+.color-lavender, .moduletable.color-lavender > div, .title-centered.color-lavender .module-title h3, .horizontal_menu.color-lavender li {
+background:#e6e6fa;
+}
+.color-darkslateblue, .moduletable.color-darkslateblue > div, .title-centered.color-darkslateblue .module-title h3, .horizontal_menu.color-darkslateblue li {
+background:#493d8b;
+}
+.color-slateblue, .moduletable.color-slateblue > div, .title-centered.color-slateblue .module-title h3, .horizontal_menu.color-slateblue li {
+background:#6a5acd;
+}
+.color-mediumslateblue, .moduletable.color-mediumslateblue > div, .title-centered.color-mediumslateblue .module-title h3, .horizontal_menu.color-whimediumslatebluete li {
+background:#7b68ee;
+}
+.color-mediumpurple, .moduletable.color-mediumpurple > div, .title-centered.color-mediumpurple .module-title h3, .horizontal_menu.color-mediumpurple li {
+background:#9370db;
+}
+.color-blueviolet, .moduletable.color-blueviolet > div, .title-centered.color-blueviolet .module-title h3, .horizontal_menu.color-blueviolet li {
+background:#8a2be2;
+}
+.color-indigo, .moduletable.color-indigo > div, .title-centered.color-indigo .module-title h3, .horizontal_menu.color-indigo li {
+background:#4b0082;
+}
+.color-darkorchid, .moduletable.color-darkorchid > div, .title-centered.color-darkorchid .module-title h3, .horizontal_menu.color-darkorchid li {
+background:#9932cc;
+}
+.color-darkviolet, .moduletable.color-darkviolet > div, .title-centered.color-darkviolet .module-title h3, .horizontal_menu.color-darkviolet li {
+background:#9400d3;
+}
+.color-mediumorchid, .moduletable.color-mediumorchid > div, .title-centered.color-mediumorchid .module-title h3, .horizontal_menu.color-mediumorchid li {
+background:#ba55d3;
+}
+.color-purple, .moduletable.color-purple > div, .title-centered.color-purple .module-title h3, .horizontal_menu.color-purple li {
+background:#800080;
+}
+.color-darkmagenta, .moduletable.color-darkmagenta > div, .title-centered.color-darkmagenta .module-title h3, .horizontal_menu.color-darkmagenta li {
+background:#8b008b;
+}
+.color-fuchsia, .moduletable.color-fuchsia > div, .title-centered.color-fuchsia .module-title h3, .horizontal_menu.color-fuchsia li {
+background:#ff00ff;
+}
+.color-violet, .moduletable.color-violet > div, .title-centered.color-violet .module-title h3, .horizontal_menu.color-violet li {
+background:#ee82ee;
+}
+.color-plum, .moduletable.color-plum > div, .title-centered.color-plum .module-title h3, .horizontal_menu.color-plum li {
+background:#dda0dd;
+}
+.color-thistle, .moduletable.color-thistle > div, .title-centered.color-thistle .module-title h3, .horizontal_menu.color-thistle li {
+background:#d8bfd8;
+}
+.color-orchid, .moduletable.color-orchid > div, .title-centered.color-orchid .module-title h3, .horizontal_menu.color-orchid li {
+background:#da70d6;
+}
+.color-mediumvioletred, .moduletable.color-mediumvioletred > div, .title-centered.color-mediumvioletred .module-title h3, .horizontal_menu.color-mediumvioletred li {
+background:#c71585;
+}
+.color-deeppink, .moduletable.color-deeppink > div, .title-centered.color-deeppink .module-title h3, .horizontal_menu.color-deeppink li {
+background:#ff1493;
+}
+.color-hotpink, .moduletable.color-hotpink > div, .title-centered.color-hotpink .module-title h3, .horizontal_menu.color-hotpink li {
+background:#ff69b4;
+}
+.color-palevioletred, .moduletable.color-palevioletred > div, .title-centered.color-palevioletred .module-title h3, .horizontal_menu.color-palevioletred li {
+background:#db7093;
+}
+.color-pink, .moduletable.color-pink > div, .title-centered.color-pink .module-title h3, .horizontal_menu.color-pink li {
+background:#ffc0cb;
+}
+.color-lightpink, .moduletable.color-lightpink > div, .title-centered.color-lightpink .module-title h3, .horizontal_menu.color-lightpink li {
+background:#ffb6c1;
+}
+.color-tomato, .moduletable.color-tomato > div, .title-centered.color-tomato .module-title h3, .horizontal_menu.color-tomato li {
+background:#ff6347;
+}
+.color-orangered, .moduletable.color-orangered > div, .title-centered.color-orangered .module-title h3, .horizontal_menu.color-orangered li {
+background:#ff4500;
+}
+.color-coral, .moduletable.color-coral > div, .title-centered.color-coral .module-title h3, .horizontal_menu.color-coral li {
+background:#ff7f50;
+}
+.color-darkorange, .moduletable.color-darkorange > div, .title-centered.color-darkorange .module-title h3, .horizontal_menu.color-darkorange li {
+background:#ff8c00;
+}
+.color-orange, .moduletable.color-orange > div, .title-centered.color-orange .module-title h3, .horizontal_menu.color-orange li {
+background:#ffa500;
+}
+.color-lightgrey, .moduletable.color-lightgrey > div, .title-centered.color-lightgrey .module-title h3, .horizontal_menu.color-lightgrey li {
+background:#d3d3d3;
+}
+.color-slategrey, .moduletable.color-slategrey > div, .title-centered.color-slategrey .module-title h3, .horizontal_menu.color-slategrey li {
+background:#708090;
+}
+.color-lightslategrey, .moduletable.color-lightslategrey > div, .title-centered.color-lightslategrey .module-title h3, .horizontal_menu.color-lightslategrey li {
+background:#778899;
+}
+.color-grey, .moduletable.color-grey > div, .title-centered.color-grey .module-title h3, .horizontal_menu.color-grey li {
+background:#808080;
+}
+.color-dimgrey, .moduletable.color-dimgrey > div, .title-centered.color-dimgrey .module-title h3, .horizontal_menu.color-dimgrey li {
+background:#696969;
+}
+.color-darkslategrey, .moduletable.color-darkslategrey > div, .title-centered.color-darkslategrey .module-title h3, .horizontal_menu.color-darkslategrey li {
+background:#2f4f4f;
+}
+.color-darkgrey, .moduletable.color-darkgrey > div, .title-centered.color-darkgrey .module-title h3, .horizontal_menu.color-darkgrey li {
+background:#a9a9a9;
+}
+.color-black, .moduletable.color-black > div, .title-centered.color-black .module-title h3, .horizontal_menu.color-black li {
+background:#000;
+}
+.color-silver, .moduletable.color-silver > div, .title-centered.color-silver .module-title h3, .horizontal_menu.color-silver li {
+background:#c0c0c0;
+}
+.color-gainsboro, .moduletable.color-gainsboro > div, .title-centered.color-gainsboro .module-title h3, .horizontal_menu.color-gainsboro li {
+background:#dcdcdc;
+}
+.color-whitesmoke, .moduletable.color-whitesmoke > div, .title-centered.color-whitesmoke .module-title h3, .horizontal_menu.color-whitesmoke li {
+background:#f5f5f5;
+}
+.color-snow, .moduletable.color-snow > div, .title-centered.color-snow .module-title h3, .horizontal_menu.color-snow li {
+background:#fffafa;
+}
+.color-mistyrose, .moduletable.color-mistyrose > div, .title-centered.color-mistyrose .module-title h3, .horizontal_menu.color-mistyrose li {
+background:#ffe4e1;
+}
+.color-seashell, .moduletable.color-seashell > div, .title-centered.color-seashell .module-title h3, .horizontal_menu.color-seashell li {
+background:#fff5ee;
+}
+.color-linen, .moduletable.color-linen > div, .title-centered.color-linen .module-title h3, .horizontal_menu.color-linen li {
+background:#faf0e6;
+}
+.color-antiquewhite, .moduletable.color-antiquewhite > div, .title-centered.color-antiquewhite .module-title h3, .horizontal_menu.color-antiquewhite li {
+background:#faebd7;
+}
+.color-oldlace, .moduletable.color-oldlace > div, .title-centered.color-oldlace .module-title h3, .horizontal_menu.color-oldlace li {
+background:#fdf5e6;
+}
+.color-floralwhite, .moduletable.color-floralwhite > div, .title-centered.color-floralwhite .module-title h3, .horizontal_menu.color-floralwhite li {
+background:#fffaf0;
+}
+.color-beige, .moduletable.color-beige > div, .title-centered.color-beige .module-title h3, .horizontal_menu.color-beige li {
+background:#f5f5dc;
+}
+.color-ivory, .moduletable.color-ivory > div, .title-centered.color-ivory .module-title h3, .horizontal_menu.color-ivory li {
+background:#fffff0;
+}
+.color-honeydew, .moduletable.color-honeydew > div, .title-centered.color-honeydew .module-title h3, .horizontal_menu.color-honeydew li {
+background:#f0fff0;
+}
+.color-mintcream, .moduletable.color-mintcream > div, .title-centered.color-mintcream .module-title h3, .horizontal_menu.color-mintcream li {
+background:#f5fffa;
+}
+.color-azure, .moduletable.color-azure > div, .title-centered.color-azure .module-title h3, .horizontal_menu.color-azure li {
+background:#f0ffff;
+}
+.color-aliceblue, .moduletable.color-aliceblue > div, .title-centered.color-aliceblue .module-title h3, .horizontal_menu.color-aliceblue li {
+background:#f0f8ff;
+}
+.color-ghostwhite, .moduletable.color-ghostwhite > div, .title-centered.color-ghostwhite .module-title h3, .horizontal_menu.color-ghostwhite li {
+background:#f8f8ff;
+}
+.color-lavenderblush, .moduletable.color-lavenderblush > div, .title-centered.color-lavenderblush .module-title h3, .horizontal_menu.color-lavenderblush li {
+background:#fff0f5;
+}
+.color-maroon, .moduletable.color-maroon > div, .title-centered.color-maroon .module-title h3, .horizontal_menu.color-maroon li {
+background:#800000;
+}
+.color-brown, .moduletable.color-brown > div, .title-centered.color-brown .module-title h3, .horizontal_menu.color-brown li {
+background:#a52a2a;
+}
+.color-rosybrown, .moduletable.color-rosybrown > div, .title-centered.color-rosybrown .module-title h3, .horizontal_menu.color-rosybrown li {
+background:#bc8f8f;
+}
+.color-sienna, .moduletable.color-sienna > div, .title-centered.color-sienna .module-title h3, .horizontal_menu.color-sienna li {
+background:#a0522d;
+}
+.color-saddlebrown, .moduletable.color-saddlebrown > div, .title-centered.color-saddlebrown .module-title h3, .horizontal_menu.color-saddlebrown li {
+background:#8b4513;
+}
+.color-chocolate, .moduletable.color-chocolate > div, .title-centered.color-chocolate .module-title h3, .horizontal_menu.color-chocolate li {
+background:#d2691e;
+}
+.color-sandybrown, .moduletable.color-sandybrown > div, .title-centered.color-sandybrown .module-title h3, .horizontal_menu.color-sandybrown li {
+background:#f4a460;
+}
+.color-peru, .moduletable.color-peru > div, .title-centered.color-peru .module-title h3, .horizontal_menu.color-peru li {
+background:#cd853f;
+}
+.color-bisque, .moduletable.color-bisque > div, .title-centered.color-bisque .module-title h3, .horizontal_menu.color-bisque li {
+background:#ffe4c4;
+}
+.color-burlywood, .moduletable.color-burlywood > div, .title-centered.color-burlywood .module-title h3, .horizontal_menu.color-burlywood li {
+background:#deb887;
+}
+.color-tan, .moduletable.color-tan > div, .title-centered.color-tan .module-title h3, .horizontal_menu.color-tan li {
+background:#d2b48c;
+}
+.color-navajowhite, .moduletable.color-navajowhite > div, .title-centered.color-navajowhite .module-title h3, .horizontal_menu.color-navajowhite li {
+background:#ffdead;
+}
+.color-blanchedalmond, .moduletable.color-blanchedalmond > div, .title-centered.color-blanchedalmond .module-title h3, .horizontal_menu.color-blanchedalmond li {
+background:#ffebcd;
+}
+.color-wheat, .moduletable.color-wheat > div, .title-centered.color-wheat .module-title h3, .horizontal_menu.color-wheat li {
+background:#f5deb3;
+}
+.color-darkgoldenrod, .moduletable.color-darkgoldenrod > div, .title-centered.color-darkgoldenrod .module-title h3, .horizontal_menu.color-darkgoldenrod li {
+background:#b8860b;
+}
+.color-cornsilk, .moduletable.color-cornsilk > div, .title-centered.color-cornsilk .module-title h3, .horizontal_menu.color-cornsilk li {
+background:#fff8dc;
+}
+
+.moduletable.title-centered.color-white .module-title, .moduletable.title-centered.color-peachpuff .module-title, .moduletable.title-centered.color-papayawhip .module-title,
+.moduletable.title-centered.color-moccasin .module-title, .moduletable.title-centered.color-gold .module-title, .moduletable.title-centered.color-khaki .module-title,
+.moduletable.title-centered.color-lemonchiffon .module-title, .moduletable.title-centered.color-palegoldenrod .module-title, .moduletable.title-centered.color-yellow .module-title,
+.moduletable.title-centered.color-lightgoldenrodyellow .module-title, .moduletable.title-centered.color-lightyellow .module-title, .moduletable.title-centered.color-cyan .module-title,
+.moduletable.title-centered.color-lightcyan .module-title, .moduletable.title-centered.color-greenyellow .module-title, .moduletable.title-centered.color-chartreuse .module-title,
+.moduletable.title-centered.color-lawngreen .module-title, .moduletable.title-centered.color-lime .module-title, .moduletable.title-centered.color-lightgreen .module-title,
+.moduletable.title-centered.color-palegreen .module-title, .moduletable.title-centered.color-springgreen .module-title, .moduletable.title-centered.color-mediumspringgreen .module-title,
+.moduletable.title-centered.color-aquamarine .module-title, .moduletable.title-centered.color-aqua .module-title, .moduletable.title-centered.color-paleturquoise .module-title,
+.moduletable.title-centered.color-lightcyan .module-title, .moduletable.title-centered.color-powderblue .module-title, .moduletable.title-centered.color-lightblue .module-title,
+.moduletable.title-centered.color-lavender .module-title, .moduletable.title-centered.color-thistle .module-title, .moduletable.title-centered.color-pink .module-title
+.moduletable.title-centered.color-lightpink .module-title, .moduletable.title-centered.color-lightgrey .module-title, .moduletable.title-centered.color-gainsboro .module-title
+.moduletable.title-centered.color-whitesmoke .module-title, .moduletable.title-centered.color-snow .module-title, .moduletable.title-centered.color-mistyrose .module-title
+.moduletable.title-centered.color-seashell .module-title, .moduletable.title-centered.color-linen .module-title, .moduletable.title-centered.color-antiquewhite .module-title,
+.moduletable.title-centered.color-oldlace .module-title, .moduletable.title-centered.color-floralwhite .module-title, .moduletable.title-centered.color-beige .module-title,
+.moduletable.title-centered.color-ivory .module-title, .moduletable.title-centered.color-honeydew .module-title, .moduletable.title-centered.color-mintcream .module-title,
+.moduletable.title-centered.color-azure .module-title, .moduletable.title-centered.color-aliceblue .module-title, .moduletable.title-centered.color-ghostwhite .module-title,
+.moduletable.title-centered.color-lavenderblush .module-title, .moduletable.title-centered.color-bisque .module-title, .moduletable.title-centered.color-navajowhite .module-title,
+.moduletable.title-centered.color-blanchedalmond .module-title, .moduletable.title-centered.color-wheat .module-title, .moduletable.title-centered.color-cornsilk .module-title,
+.moduletable.title-centered.color-turquoise .module-title, .moduletable.title-centered.color-lightgrey .module-title {
+border-color: #222;
+border-color : rgba(0,0,0,0.18);
+}
+
+.moduletable.title-centered.color-goldenrod .module-title, .moduletable.title-centered.color-darkkhaki .module-title,
+.moduletable.title-centered.color-darkcyan .module-title, .moduletable.title-centered.color-teal .module-title, .moduletable.title-centered.color-olive .module-title,
+.moduletable.title-centered.color-olivedrab .module-title, .moduletable.title-centered.color-yellowgreen .module-title, .moduletable.title-centered.color-darkolivegreen .module-title,
+.moduletable.title-centered.color-darkgreen .module-title, .moduletable.title-centered.color-green .module-title, .moduletable.title-centered.color-forestgreen .module-title,
+.moduletable.title-centered.color-limegreen .module-title, .moduletable.title-centered.color-darkseagreen .module-title, .moduletable.title-centered.color-seagreen .module-title,
+.moduletable.title-centered.color-mediumseagreen .module-title, .moduletable.title-centered.color-mediumaquamarine .module-title, .moduletable.title-centered.color-lightseagreen .module-title,
+.moduletable.title-centered.color-darkred .module-title, .moduletable.title-centered.color-firebrick .module-title, .moduletable.title-centered.color-red .module-title,
+.moduletable.title-centered.color-indianred .module-title, .moduletable.title-centered.color-lightcoral .module-title, .moduletable.title-centered.color-salmon .module-title,
+.moduletable.title-centered.color-darksalmon .module-title, .moduletable.title-centered.color-lightsalmon .module-title, .moduletable.title-centered.color-crimson .module-title,
+.moduletable.title-centered.color-deepskyblue .module-title, .moduletable.title-centered.color-blue .module-title, .moduletable.title-centered.color-orchid .module-title,
+.moduletable.title-centered.color-mediumturquoise .module-title, .moduletable.title-centered.color-darkturquoise .module-title, .moduletable.title-centered.color-cadetblue .module-title,
+.moduletable.title-centered.color-skyblue .module-title, .moduletable.title-centered.color-lightskyblue .module-title, .moduletable.title-centered.color-steelblue .module-title,
+.moduletable.title-centered.color-dodgerblue .module-title, .moduletable.title-centered.color-lightsteelblue .module-title, .moduletable.title-centered.color-cornflowerblue .module-title,
+.moduletable.title-centered.color-royalblue .module-title, .moduletable.title-centered.color-midnightblue .module-title, .moduletable.title-centered.color-navy .module-title,
+.moduletable.title-centered.color-darkblue .module-title, .moduletable.title-centered.color-mediumblue .module-title, .moduletable.title-centered.color-mediumslateblue .module-title,
+.moduletable.title-centered.color-rebeccapurple .module-title, .moduletable.title-centered.color-magenta .module-title, .moduletable.title-centered.color-darkslateblue .module-title,
+.moduletable.title-centered.color-slateblue .module-title, .moduletable.title-centered.color-mediumslateblue .module-title, .moduletable.title-centered.color-mediumpurple .module-title,
+.moduletable.title-centered.color-blueviolet .module-title, .moduletable.title-centered.color-indigo .module-title, .moduletable.title-centered.color-darkorchid .module-title,
+.moduletable.title-centered.color-darkviolet .module-title, .moduletable.title-centered.color-purple .module-title, .moduletable.title-centered.color-darkmagenta .module-title,
+.moduletable.title-centered.color-fuchsia .module-title, .moduletable.title-centered.color-violet .module-title, .moduletable.title-centered.color-plum .module-title,
+.moduletable.title-centered.color-mediumvioletred .module-title, .moduletable.title-centered.color-deeppink .module-title, .moduletable.title-centered.color-hotpink .module-title,
+.moduletable.title-centered.color-palevioletred .module-title, .moduletable.title-centered.color-tomato .module-title, .moduletable.title-centered.color-orangered .module-title,
+.moduletable.title-centered.color-coral .module-title, .moduletable.title-centered.color-darkorange .module-title, .moduletable.title-centered.color-orange .module-title,
+.moduletable.title-centered.color-slategrey .module-title, .moduletable.title-centered.color-lightslategrey .module-title, .moduletable.title-centered.color-grey .module-title,
+.moduletable.title-centered.color-dimgrey .module-title, .moduletable.title-centered.color-darkslategrey .module-title, .moduletable.title-centered.color-darkgrey .module-title,
+.moduletable.title-centered.color-black .module-title, .moduletable.title-centered.color-silver .module-title, .moduletable.title-centered.color-maroon .module-title,
+.moduletable.title-centered.color-brown .module-title, .moduletable.title-centered.color-rosybrown .module-title, .moduletable.title-centered.color-sienna .module-title,
+.moduletable.title-centered.color-saddlebrown .module-title, .moduletable.title-centered.color-chocolate .module-title, .moduletable.title-centered.color-sandybrown .module-title,
+.moduletable.title-centered.color-peru .module-title, .moduletable.title-centered.color-burlywood .module-title, .moduletable.title-centered.color-tan .module-title,
+.moduletable.title-centered.color-darkgoldenrod .module-title, .moduletable.title-centered.color-mediumorchid .module-title {
+border-color: #eee;
+border-color : rgba(255,255,255,0.2);
+}
+
+.color-white, .moduletable.color-white > div, .color-white a, .color-white a:hover,
+.color-peachpuff, .moduletable.color-peachpuff > div, .color-peachpuff a, .color-peachpuff a:hover,
+.color-papayawhip, .moduletable.color-papayawhip > div, .color-papayawhip a, .color-papayawhip a:hover,
+.color-moccasin, .moduletable.color-moccasin > div, .color-moccasin a, .color-moccasin a:hover,
+.color-gold, .moduletable.color-gold > div, .color-gold a, .color-gold a:hover,
+.color-khaki, .moduletable.color-khaki > div, .color-khaki a, .color-khaki a:hover,
+.color-lemonchiffon, .moduletable.color-lemonchiffon > div, .color-lemonchiffon a, .color-lemonchiffon a:hover,
+.color-palegoldenrod, .moduletable.color-palegoldenrod > div, .color-palegoldenrod a, .color-palegoldenrod a:hover,
+.color-yellow, .moduletable.color-yellow > div, .color-yellow a, .color-yellow a:hover,
+.color-lightgoldenrodyellow, .moduletable.color-lightgoldenrodyellow > div, .color-lightgoldenrodyellow a, .color-lightgoldenrodyellow a:hover,
+.color-lightyellow, .moduletable.color-lightyellow > div, .color-lightyellow a, .color-lightyellow a:hover,
+.color-cyan, .moduletable.color-cyan > div, .color-cyan a, .color-cyan a:hover,
+.color-lightcyan, .moduletable.color-lightcyan > div, .color-lightcyan a, .color-lightcyan a:hover,
+.color-greenyellow, .moduletable.color-greenyellow > div, .color-greenyellow a, .color-greenyellow a:hover,
+.color-chartreuse, .moduletable.color-chartreuse > div, .color-chartreuse a, .color-chartreuse a:hover,
+.color-lawngreen, .moduletable.color-lawngreen > div, .color-lawngreen a, .color-lawngreen a:hover,
+.color-lime, .moduletable.color-lime > div, .color-lime a, .color-lime a:hover,
+.color-lightgreen, .moduletable.color-lightgreen > div, .color-lightgreen a, .color-lightgreen a:hover,
+.color-palegreen, .moduletable.color-palegreen > div, .color-palegreen a, .color-palegreen a:hover,
+.color-springgreen, .moduletable.color-springgreen > div, .color-springgreen a, .color-springgreen a:hover,
+.color-mediumspringgreen, .moduletable.color-mediumspringgreen > div, .color-mediumspringgreen a, .color-mediumspringgreen a:hover,
+.color-turquoise, .moduletable.color-turquoise > div, .color-turquoise a, .color-turquoise a:hover,
+.color-aquamarine, .moduletable.color-aquamarine > div, .color-aquamarine a, .color-aquamarine a:hover,
+.color-aqua, .moduletable.color-aqua > div, .color-aqua a, .color-aqua a:hover,
+.color-paleturquoise, .moduletable.color-paleturquoise > div, .color-paleturquoise a, .color-paleturquoise a:hover,
+.color-lightcyan, .moduletable.color-lightcyan > div, .color-lightcyan a, .color-lightcyan a:hover,
+.color-powderblue, .moduletable.color-powderblue > div, .color-powderblue a, .color-powderblue a:hover,
+.color-lightblue, .moduletable.color-lightblue > div, .color-lightblue a, .color-lightblue a:hover,
+.color-lavender, .moduletable.color-lavender > div, .color-lavender a, .color-lavender a:hover,
+.color-thistle, .moduletable.color-thistle > div, .color-thistle a, .color-thistle a:hover,
+.color-pink, .moduletable.color-pink > div, .color-pink a, .color-pink a:hover,
+.color-lightpink, .moduletable.color-lightpink > div, .color-lightpink a, .color-lightpink a:hover,
+.color-lightgrey, .moduletable.color-lightgrey > div, .color-lightgrey a, .color-lightgrey a:hover,
+.color-gainsboro, .moduletable.color-gainsboro > div, .color-gainsboro a, .color-gainsboro a:hover,
+.color-whitesmoke, .moduletable.color-whitesmoke > div, .color-whitesmoke a, .color-whitesmoke a:hover,
+.color-snow, .moduletable.color-snow > div, .color-snow a, .color-snow a:hover,
+.color-mistyrose, .moduletable.color-mistyrose > div, .color-mistyrose a, .color-mistyrose a:hover,
+.color-seashell, .moduletable.color-seashell > div, .color-seashell a, .color-seashell a:hover,
+.color-linen, .moduletable.color-linen > div, .color-linen a, .color-linen a:hover,
+.color-antiquewhite, .moduletable.color-antiquewhite > div, .color-antiquewhite a, .color-antiquewhite a:hover,
+.color-oldlace, .moduletable.color-oldlace > div, .color-oldlace a, .color-oldlace a:hover,
+.color-floralwhite, .moduletable.color-floralwhite > div, .color-floralwhite a, .color-floralwhite a:hover,
+.color-beige, .moduletable.color-beige > div, .color-beige a, .color-beige a:hover,
+.color-ivory, .moduletable.color-ivory > div, .color-ivory a, .color-ivory a:hover,
+.color-honeydew, .moduletable.color-honeydew > div, .color-honeydew a, .color-honeydew a:hover,
+.color-mintcream, .moduletable.color-mintcream > div, .color-mintcream a, .color-lightyellow a:hover,
+.color-azure, .moduletable.color-azure > div, .color-azure a, .color-azure a:hover,
+.color-aliceblue, .moduletable.color-aliceblue > div, .color-aliceblue a, .color-aliceblue a:hover,
+.color-ghostwhite, .moduletable.color-ghostwhite > div, .color-ghostwhite a, .color-ghostwhite a:hover,
+.color-lavenderblush, .moduletable.color-lavenderblush > div, .color-lavenderblush a, .color-lavenderblush a:hover,
+.color-bisque, .moduletable.color-bisque > div, .color-bisque a, .color-bisque a:hover,
+.color-navajowhite, .moduletable.color-navajowhite > div, .color-navajowhite a, .color-navajowhite a:hover,
+.color-blanchedalmond, .moduletable.color-blanchedalmond > div, .color-blanchedalmond a, .color-blanchedalmond a:hover,
+.color-wheat, .moduletable.color-wheat > div, .color-wheat a, .color-wheat a:hover,
+.color-cornsilk, .moduletable.color-cornsilk > div, .color-cornsilk a, .color-cornsilk a:hover,
+.color-lightgrey, .moduletable.color-lightgrey > div, .color-lightgrey a, .color-lightgrey a:hover,
+.color-turquoise, .moduletable.color-turquoise > div, .color-turquoise a, .color-turquoise a:hover,
+.color-bisque, .moduletable.color-bisque > div, .color-bisque a, .color-bisque a:hover {
+color: #222;
+}
+
+.color-goldenrod, .moduletable.color-goldenrod > div, .color-goldenrod a, .color-goldenrod a:hover,
+.color-darkkhaki, .moduletable.color-darkkhaki > div, .color-darkkhaki a, .color-darkkhaki a:hover,
+.color-darkcyan, .moduletable.color-darkcyan > div, .color-darkcyan a, .color-darkcyan a:hover,
+.color-teal, .moduletable.color-teal > div, .color-teal a, .color-teal a:hover,
+.color-olive, .moduletable.color-olive > div, .color-olive a, .color-olive a:hover,
+.color-olivedrab, .moduletable.color-olivedrab > div, .color-olivedrab a, .color-olivedrab a:hover,
+.color-yellowgreen, .moduletable.color-yellowgreen > div, .color-yellowgreen a, .color-yellowgreen a:hover,
+.color-darkolivegreen, .moduletable.color-darkolivegreen > div, .color-darkolivegreen a, .color-darkolivegreen a:hover,
+.color-darkgreen, .moduletable.color-darkgreen > div, .color-darkgreen a, .color-darkgreen a:hover,
+.color-green, .moduletable.color-green > div, .color-green a, .color-green a:hover,
+.color-forestgreen, .moduletable.color-forestgreen > div, .color-forestgreen a, .color-forestgreen a:hover,
+.color-limegreen, .moduletable.color-limegreen > div, .color-limegreen a, .color-limegreen a:hover,
+.color-darkseagreen, .moduletable.color-darkseagreen > div, .color-darkseagreen a, .color-darkseagreen a:hover,
+.color-seagreen, .moduletable.color-seagreen > div, .color-seagreen a, .color-seagreen a:hover,
+.color-mediumseagreen, .moduletable.color-mediumseagreen > div, .color-mediumseagreen a, .color-mediumseagreen a:hover,
+.color-mediumaquamarine, .moduletable.color-mediumaquamarine > div, .color-mediumaquamarine a, .color-mediumaquamarine a:hover,
+.color-lightseagreen, .moduletable.color-lightseagreen > div, .color-lightseagreen a, .color-lightseagreen a:hover,
+.color-darkred, .moduletable.color-darkred > div, .color-darkred a, .color-darkred a:hover,
+.color-firebrick, .moduletable.color-firebrick > div, .color-firebrick a, .color-firebrick a:hover,
+.color-red, .moduletable.color-red > div, .color-red a, .color-red a:hover,
+.color-indianred, .moduletable.color-indianred > div, .color-indianred a, .color-indianred a:hover,
+.color-lightcoral, .moduletable.color-lightcoral > div, .color-lightcoral a, .color-lightcoral a:hover,
+.color-salmon, .moduletable.color-salmon > div, .color-salmon a, .color-salmon a:hover,
+.color-darksalmon, .moduletable.color-darksalmon > div, .color-darksalmon a, .color-darksalmon a:hover,
+.color-lightsalmon, .moduletable.color-lightsalmon > div, .color-lightsalmon a, .color-lightsalmon a:hover,
+.color-crimson, .moduletable.color-crimson > div, .color-crimson a, .color-crimson a:hover,
+.color-deepskyblue, .moduletable.color-deepskyblue > div, .color-deepskyblue a, .color-deepskyblue a:hover,
+.color-blue, .moduletable.color-blue > div, .color-blue a, .color-blue a:hover,
+.color-mediumturquoise, .moduletable.color-mediumturquoise > div, .color-mediumturquoise a, .color-mediumturquoise a:hover,
+.color-darkturquoise, .moduletable.color-darkturquoise > div, .color-darkturquoise a, .color-darkturquoise a:hover,
+.color-cadetblue, .moduletable.color-cadetblue > div, .color-cadetblue a, .color-cadetblue a:hover,
+.color-skyblue, .moduletable.color-skyblue > div, .color-skyblue a, .color-skyblue a:hover,
+.color-lightskyblue, .moduletable.color-lightskyblue > div, .color-lightskyblue a, .color-lightskyblue a:hover,
+.color-steelblue, .moduletable.color-steelblue > div, .color-steelblue a, .color-steelblue a:hover,
+.color-dodgerblue, .moduletable.color-dodgerblue > div, .color-dodgerblue a, .color-dodgerblue a:hover,
+.color-lightsteelblue, .moduletable.color-lightsteelblue > div, .color-lightsteelblue a, .color-lightsteelblue a:hover,
+.color-cornflowerblue, .moduletable.color-cornflowerblue > div, .color-cornflowerblue a, .color-cornflowerblue a:hover,
+.color-royalblue, .moduletable.color-royalblue > div, .color-royalblue a, .color-royalblue a:hover,
+.color-midnightblue, .moduletable.color-midnightblue > div, .color-midnightblue a, .color-midnightblue a:hover,
+.color-navy, .moduletable.color-navy > div, .color-navy a, .color-navy a:hover,
+.color-darkblue, .moduletable.color-darkblue > div, .color-darkblue a, .color-darkblue a:hover,
+.color-mediumblue, .moduletable.color-mediumblue > div, .color-mediumblue a, .color-mediumblue a:hover,
+.color-mediumslateblue, .moduletable.color-mediumslateblue > div, .color-mediumslateblue a, .color-mediumslateblue a:hover,
+.color-rebeccapurple, .moduletable.color-rebeccapurple > div, .color-rebeccapurple a, .color-rebeccapurple a:hover,
+.color-magenta, .moduletable.color-magenta > div, .color-magenta a, .color-magenta a:hover,
+.color-darkslateblue, .moduletable.color-darkslateblue > div, .color-darkslateblue a, .color-darkslateblue a:hover,
+.color-slateblue, .moduletable.color-slateblue > div, .color-slateblue a, .color-slateblue a:hover,
+.color-mediumslateblue, .moduletable.color-mediumslateblue > div, .color-mediumslateblue a, .color-mediumslateblue a:hover,
+.color-mediumpurple, .moduletable.color-mediumpurple > div, .color-darkcyan a, .color-mediumpurple a:hover,
+.color-blueviolet, .moduletable.color-blueviolet > div, .color-blueviolet a, .color-blueviolet a:hover,
+.color-indigo, .moduletable.color-indigo > div, .color-indigo a, .color-indigo a:hover,
+.color-darkorchid, .moduletable.color-darkorchid > div, .color-darkorchid a, .color-darkorchid a:hover,
+.color-darkviolet, .moduletable.color-darkviolet > div, .color-darkviolet a, .color-darkviolet a:hover,
+.color-purple, .moduletable.color-purple > div, .color-purple a, .color-purple a:hover,
+.color-darkmagenta, .moduletable.color-darkmagenta > div, .color-darkmagenta a, .color-darkmagenta a:hover,
+.color-fuchsia, .moduletable.color-fuchsia > div, .color-fuchsia a, .color-fuchsia a:hover,
+.color-violet, .moduletable.color-violet > div, .color-violet a, .color-violet a:hover,
+.color-plum, .moduletable.color-plum > div, .color-plum a, .color-plum a:hover,
+.color-orchid, .moduletable.color-orchid > div, .color-orchid a, .color-orchid a:hover,
+.color-mediumvioletred, .moduletable.color-mediumvioletred > div, .color-mediumvioletred a, .color-mediumvioletred a:hover,
+.color-deeppink, .moduletable.color-deeppink > div, .color-deeppink a, .color-deeppink a:hover,
+.color-hotpink, .moduletable.color-hotpink > div, .color-hotpink a, .color-hotpink a:hover,
+.color-palevioletred, .moduletable.color-palevioletred > div, .color-palevioletred a, .color-palevioletred a:hover,
+.color-tomato, .moduletable.color-tomato > div, .color-tomato a, .color-tomato a:hover,
+.color-orangered, .moduletable.color-orangered > div, .color-orangered a, .color-orangered a:hover,
+.color-coral, .moduletable.color-coral > div, .color-coral a, .color-coral a:hover,
+.color-darkorange, .moduletable.color-darkorange > div, .color-darkorange a, .color-darkorange a:hover,
+.color-orange, .moduletable.color-orange > div, .color-orange a, .color-orange a:hover,
+.color-slategrey, .moduletable.color-slategrey > div, .color-slategrey a, .color-slategrey a:hover,
+.color-lightslategrey, .moduletable.color-lightslategrey > div, .color-lightslategrey a, .color-lightslategrey a:hover,
+.color-grey, .moduletable.color-grey > div, .color-grey a, .color-grey a:hover,
+.color-dimgrey, .moduletable.color-dimgrey > div, .color-dimgrey a, .color-dimgrey a:hover,
+.color-darkslategrey, .moduletable.color-darkslategrey > div, .color-darkslategrey a, .color-darkslategrey a:hover,
+.color-darkgrey, .moduletable.color-darkgrey > div, .color-darkgrey a, .color-darkgrey a:hover,
+.color-black, .moduletable.color-black > div, .color-black a, .color-black a:hover,
+.color-silver, .moduletable.color-silver > div, .color-silver a, .color-silver a:hover,
+.color-maroon, .moduletable.color-maroon > div, .color-maroon a, .color-maroon a:hover,
+.color-brown, .moduletable.color-brown > div, .color-brown a, .color-brown a:hover,
+.color-rosybrown, .moduletable.color-rosybrown > div, .color-rosybrown a, .color-rosybrown a:hover,
+.color-sienna, .moduletable.color-sienna > div, .color-sienna a, .color-sienna a:hover,
+.color-saddlebrown, .moduletable.color-saddlebrown > div, .color-saddlebrown a, .color-saddlebrown a:hover,
+.color-chocolate, .moduletable.color-chocolate > div, .color-chocolate a, .color-chocolate a:hover,
+.color-sandybrown, .moduletable.color-sandybrown > div, .color-sandybrown a, .color-sandybrown a:hover,
+.color-peru, .moduletable.color-peru > div, .color-peru a, .color-peru a:hover,
+.color-burlywood, .moduletable.color-burlywood > div, .color-burlywood a, .color-burlywood a:hover,
+.color-tan, .moduletable.color-tan > div, .color-tan a, .color-tan a:hover,
+.color-darkgoldenrod, .moduletable.color-darkgoldenrod > div, .color-darkgoldenrod a, .color-darkgoldenrod a:hover,
+.color-mediumorchid, .moduletable.color-mediumorchid > div, .color-mediumorchid a, .color-mediumorchid a:hover {
+color: #eee;
 }
 
 
@@ -1560,6 +2226,111 @@ column-count: 5;
 column-count: 6;
 }
 
+
+/********************************			Image with Text 					**************************/
+
+
+.image-text-left, .image-text-right {
+position:relative;
+margin:0;
+padding:0;
+*zoom: 1;
+}
+
+.image-text-left:before, .image-text-left:after,
+.image-text-right:before, .image-text-right:after {
+display: table;
+content: "";
+line-height: 0;
+}
+
+.image-text-left:after, .image-text-right:after {
+clear: both;
+}
+
+.image-text-image {
+display:block;
+text-indent: -9999px;
+min-height:50vh;
+background-position:50% 50%;
+background-repeat:no-repeat;
+background-size: cover;
+}
+
+.image-text-column {
+padding: 14px 35px;
+}
+
+@media screen and (min-width: 980px) {
+
+	.image-text-image {
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:50%;
+	}
+	
+	.image-text-column {
+	float:right;
+	width:50%;
+	}
+	
+	.image-text-right .image-text-image {
+	right:0;
+	}
+	
+	.image-text-right .image-text-column {
+	float:left;
+	}
+	
+	.image-text-column {
+	min-height:50vh;
+	}
+
+}
+
+@media screen and (min-width: 1100px) {
+
+	.image-text-image, .image-text-column {
+	min-height:450px;
+	}
+	
+	.image-text-column {
+	width:41.66%;
+	padding: 24px 46px;
+	}
+	.image-text-image {
+	width:58.34%;
+	}
+
+}
+
+@media screen and (min-width: 1300px) {
+
+	.image-text-image, .image-text-column {
+	min-height:400px;
+	}
+	
+	.image-text-column {
+	width:33.34%;
+	padding: 34px 50px;
+	}
+	.image-text-image {
+	width:66.66%;
+	}
+
+}
+
+.image-text-column h2 {
+margin: 18px 0 16px 0;
+padding:0;
+}
+
+.image-text-column h2, .image-text-column, .image-text-column a, .image-text-column a:hover {
+color: inherit;
+}
+
+
 /*************************************************************************************************************
 
 									IMAGES
@@ -1609,7 +2380,7 @@ overflow: hidden;
 margin: 20px 1%;
 max-width:98%;
 text-align: center;
-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.33);
+background:#222;
 }
 
 /**		no min width to prevent problem in Blog page 
@@ -1621,6 +2392,13 @@ box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.33);
 
 }
 **/
+@media screen and (min-width: 980px) {
+
+	[class*="effect-image"] {
+	box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.33);
+	}
+
+}
 
 [class*="effect-image"] + p, [class*="effect-image"] + h1, [class*="effect-image"] + h2,
 [class*="effect-image"] + h3, [class*="effect-image"] + h4, [class*="effect-image"] + h5 {
@@ -1631,15 +2409,13 @@ clear:both;
 [class*="effect-image"] img {
 position: relative;
 display: block;
-
 }
 
 [class*="effect-image"] figcaption {
-padding: 2em;
+margin-top:0 !important;
+padding: 26px 16px 0 16px;
 color: #fff;
 font-size: 1.25em;
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
 }
 
 [class*="effect-image"] figcaption::before,
@@ -1649,22 +2425,26 @@ pointer-events: none;
 
 [class*="effect-image"] figcaption,
 [class*="effect-image"] figcaption > a {
-position: absolute;
-top: 0;
-bottom:0;
-left: 0;
-right:0;
-font-style:normal;
+position: relative;
 }
 
-/* Anchor will cover the whole item by default */
+@media screen and (min-width: 980px) {
+	
+	[class*="effect-image"] figcaption {
+	padding: 2em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	}
 
-[class*="effect-image"] figcaption > a {
-z-index: 1000;
-text-indent: 200%;
-white-space: nowrap;
-font-size: 0;
-opacity: 0;
+	[class*="effect-image"] figcaption {
+	position: absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right:0;
+	font-style:normal;
+	}
+
 }
 
 [class*="effect-image"] h3 {
@@ -1673,8 +2453,12 @@ text-shadow: 0 0 1px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 1);
 font-weight: 300;
 }
 
-[class*="effect-image"] h3 span {
-font-weight: 800;
+@media screen and (min-width: 980px) {
+
+	[class*="effect-image"] h3 {
+	text-shadow: 0 0 1px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 1);
+	}
+
 }
 
 [class*="effect-image"] h3, [class*="effect-image"] p {
@@ -1685,6 +2469,8 @@ padding:0;
 [class*="effect-image"] p {
 letter-spacing: 1px;
 font-size: 70%;
+padding: 1em 2em 0.5em 2em;
+text-transform: none;
 }
 
 [class*="effect-image"] h3, [class*="effect-image"] p {
@@ -1692,7 +2478,32 @@ color: #fff;
 }
 
 [class*="effect-image"] a, [class*="effect-image"] a:hover {
-color : red;
+display:inline-block;
+color : white;
+font-style:normal;
+text-shadow: 0 0 6px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 0);
+border:1px solid rgba(255,255,255,0.7);
+border-radius:12px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+margin:20px 0;
+padding:7px 12px;
+font-size:12px;
+text-transform:uppercase;
+-webkit-transition : all 0.4s linear;
+-moz-transition : all 0.4s linear;
+-ms-transition : all 0.4s linear;
+-o-transition : all 0.4s linear;
+transition : all 0.4s linear;
+}
+
+[class*="effect-image"] a:hover {
+color : white;
+font-style:normal;
+border:1px solid rgba(255,255,255,0.8);
+box-shadow: 0 0 6px rgba(0,0,0,0.4);
+background: rgba(0,0,0,0.20);
+text-decoration:none;
+cursor:pointer;
 }
 
 
