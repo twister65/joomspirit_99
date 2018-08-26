@@ -521,6 +521,7 @@ foreach ($googleFonts as $loadFont) {
 	jQuery(".hover3d").hover3d({
 			selector: ".hover3d-card",
 			invert: true,
+			shine: true,
 		});
 	</script>
 	<?php endif; ?>
