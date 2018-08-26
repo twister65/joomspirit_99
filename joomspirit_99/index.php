@@ -520,7 +520,6 @@ foreach ($googleFonts as $loadFont) {
 	<script type="text/javascript">
 	jQuery(".hover3d").hover3d({
 			selector: ".hover3d-card",
-			invert: true,
 			shine: true,
 		});
 	</script>
