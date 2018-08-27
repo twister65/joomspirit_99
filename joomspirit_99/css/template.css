@@ -2230,13 +2230,14 @@ column-count: 6;
 /********************************			Image with Text 					**************************/
 
 
-.image-text-left, .image-text-right {
+.image-text-left, .image-text-right, .image-text-below {
 position:relative;
 margin:0;
 padding:0;
 *zoom: 1;
 }
 
+.image-text-below:before, .image-text-below:after,
 .image-text-left:before, .image-text-left:after,
 .image-text-right:before, .image-text-right:after {
 display: table;
@@ -2244,11 +2245,11 @@ content: "";
 line-height: 0;
 }
 
-.image-text-left:after, .image-text-right:after {
+.image-text-below:after, .image-text-left:after, .image-text-right:after {
 clear: both;
 }
 
-.image-text-image {
+.image-text-image, .image-text-image-below {
 display:block;
 text-indent: -9999px;
 min-height:50vh;
@@ -2257,7 +2258,7 @@ background-repeat:no-repeat;
 background-size: cover;
 }
 
-.image-text-column {
+.image-text-column, .image-text-column-below {
 padding: 14px 35px;
 }
 
@@ -2321,12 +2322,15 @@ padding: 14px 35px;
 
 }
 
-.image-text-column h2 {
+.image-text-column h2, .image-text-column-below h2 {
 margin: 18px 0 16px 0;
 padding:0;
 }
 
-.image-text-column h2, .image-text-column, .image-text-column a, .image-text-column a:hover {
+.image-text-column h2, .image-text-column-below h2, 
+.image-text-column, .image-text-column-below, 
+.image-text-column a, .image-text-column-below a, 
+.image-text-column a:hover, .image-text-column-below a:hover {
 color: inherit;
 }
 
