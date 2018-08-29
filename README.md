@@ -10,4 +10,4 @@ http://www.template-joomspirit.com/help/template_99/manual.html
 See Wiki page for additional documentation : 
 https://github.com/twister65/joomspirit_99/wiki
 
-The Zip directory contains archive files to install the template and plugins.
+Install joomspirit_99_full.zip package for a complete installation (template and plugins).
