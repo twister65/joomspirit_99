@@ -207,6 +207,7 @@ color:#353E6E;
 font: normal 0.8em/1.5 verdana, geneva, sans-serif;
 font-weight:300;
 background: #fff;
+/* background: #fff5ee; */ /* color-seashell */
 }
 
 .text-uppercase * {
@@ -3042,6 +3043,7 @@ z-index: -1;
 .hover3d-detail > div {
 padding: 12px;
 background:rgba(0,0,0,0.8);
+color:#fff;
 }
 
 .hover3d-title {

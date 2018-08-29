@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
+	<name>plg_editors-xtd_hover3d</name>
+	<creationDate>28/08/2018</creationDate>
+	<author>twister65</author>
+	<authorUrl>https://github.com/twister65/joomspirit_99</authorUrl>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<downloadUrl>https://github.com/twister65/joomspirit_99/zip</downloadUrl>
+	<description>"Insert an image with hover3d effect"</description>
+	<files>
+		<filename plugin="hover3d">hover3d.php</filename>
+	</files>
+</extension>
