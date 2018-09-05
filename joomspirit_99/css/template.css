@@ -2253,7 +2253,7 @@ clear: both;
 .image-text-image, .image-text-image-below {
 display:block;
 text-indent: -9999px;
-min-height:50vh;
+min-height:65vh;
 background-position:50% 50%;
 background-repeat:no-repeat;
 background-size: cover;
