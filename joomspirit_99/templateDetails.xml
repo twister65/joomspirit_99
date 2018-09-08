@@ -473,9 +473,9 @@
 		
 		<fieldset name="08" label="Animations">
 			
-			<field name="docsr" type="note" class="alert alert-info" close="true" label="To animate elements as they scroll into view, see ScrollReveal documentation :" description="https://scrollrevealjs.org/api/defaults.html"/>
-			
-			<field name="plate_options" type="note" class="alert alert-info" close="true" label="To customize 3D hover effect, see jQuery Plate documentation :" description="https://github.com/krebszattila/jquery-plate#options"/>
+			<field name="docsr" type="note" class="alert alert-info" close="true" label="To animate elements as they scroll into view, see ScrollReveal documentation : " description="&lt;a href='https://scrollrevealjs.org/api/defaults.html' target='_blank' &gt;ScrollReveal API&lt;/a&gt;"/>
+
+			<field name="plate_options" type="note" class="alert alert-info" close="true" label="To customize plate effect, see jQuery Plate documentation :" description="&lt;a href='https://github.com/krebszattila/jquery-plate#options' target='_blank' &gt;jQuery Plate Options&lt;/a&gt;"/>
 			
 			<field name="animation" type="radio" default="yes" label="Enable animations for the modules positions" description="Disable this option if you doesn't want use any animation on scroll">				
 				<option value="yes">Yes</option>
