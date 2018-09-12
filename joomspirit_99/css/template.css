@@ -5103,6 +5103,12 @@ z-index: 1;
 
 /**		Pagination 					**/
 
+.pagenavcounter {
+font-style:italic;
+color:gray;
+text-align: center;
+}
+
 .pagination {
 display: inline-block;
 *display:inline;
