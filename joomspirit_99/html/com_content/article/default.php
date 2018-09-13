@@ -18,18 +18,16 @@ $urls    = json_decode($this->item->urls);
 $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
-
-// Check if associations are implemented. If they are, define the parameter.
-$assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 JHtml::_('behavior.caption');
 $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
-	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') || $assocParam);
+	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author'));
 
 ?>
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 	
 	<?php if ($params->get('access-edit') ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
+		
 		<ul class="actions">
 		<?php if (!$this->print) : ?>
 				<?php if ($params->get('show_print_icon')) : ?>
@@ -54,13 +52,13 @@ $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_da
 				</li>
 		<?php endif; ?>
 		</ul>
-	<?php endif; ?>
+	<?php endif; ?>	
 	
 	<?php if ($params->get('show_title') ) : ?>
 	<div class="page-header">
 		<h1 itemprop="name">
 			<?php if ($params->get('show_title')) : ?>
--				<span class="<?php echo $this->pageclass_sfx;?>"><?php echo $this->escape($this->item->title); ?></span>
+				<span class="<?php echo $this->pageclass_sfx;?>"><?php echo $this->escape($this->item->title); ?></span>
 			<?php endif; ?>
 		</h1>
 		<?php if ($this->item->state == 0) : ?>
@@ -79,8 +77,8 @@ $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_da
 	<div class="page-header">
 		<h1 class="<?php echo $this->pageclass_sfx;?>"> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 	</div>
-	<?php endif; ?>
-	<?php if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
+	<?php endif;
+	if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
 	{
 		echo $this->item->pagination;
 	}
