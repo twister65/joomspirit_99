@@ -2263,6 +2263,7 @@ background-size: cover;
 padding: 14px 35px;
 }
 
+
 @media screen and (min-width: 980px) {
 
 	.image-text-image {
@@ -4526,7 +4527,7 @@ padding-right: 5px;
 }
 
 .thumbnails {
-margin:0;
+margin:-20px;
 list-style:none;
 *zoom: 1;
 }
@@ -4546,6 +4547,7 @@ clear: both;
 float: left;
 margin-right: 20px;
 }
+
 
 .tag-category ul.thumbnails {
 margin-top: 16px;
@@ -4643,6 +4645,36 @@ white-space: normal;
 .btn-link, .btn-link:active, .btn-link[disabled], fieldset[disabled] .btn-link {
 background-color: transparent;
 box-shadow: none;
+}
+
+.btn-success {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #5bb75b;
+	background-image: -moz-linear-gradient(top,#62c462,#51a351);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#62c462),to(#51a351));
+	background-image: -webkit-linear-gradient(top,#62c462,#51a351);
+	background-image: -o-linear-gradient(top,#62c462,#51a351);
+	background-image: linear-gradient(to bottom,#62c462,#51a351);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+	border-color: #51a351 #51a351 #387038;
+	*background-color: #51a351;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+	color: #fff;
+	background-color: #51a351;
+	*background-color: #499249;
+}
+.btn-success:active,
+.btn-success.active {
+	background-color: #408140 \9;
 }
 
 input.btn {
@@ -5747,6 +5779,9 @@ min-width:0;
 background: #fff;
 padding:0;
 margin:0;
+position: relative;
+max-height: 400px;
+width: 90%;
 }
 
 .modal a {
@@ -5786,9 +5821,6 @@ line-height: 0;
 }
 .thumbnails:after {
 clear: both;
-}
-.row-fluid .thumbnails {
-margin-left: 0;
 }
 .thumbnails > li {
 float: left;
@@ -5840,6 +5872,7 @@ width: 80px;
 text-align: center;
 }
 
+
 /*****************************************************************************************
 
 								Popup
@@ -5852,6 +5885,30 @@ padding:0 20px;
 
 .formelm {
 margin:10px 0 20px 0;
+}
+
+.container-popup {
+	padding: 28px 10px 10px 10px;
+}
+
+.container-popup .btn {
+	color: #333;
+}
+
+.container-popup .btn-success {
+	color: #fff;
+}
+
+ul.manager .height-50 .icon-folder-2 {
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+	font-size: 35px;
+}
+
+.small {
+	padding : 12px;
+	font-size: 12px;
 }
 
 
