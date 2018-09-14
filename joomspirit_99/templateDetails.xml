@@ -28,6 +28,7 @@
 <folder>fonts</folder>
 <folder>images</folder>
 <folder>img</folder>
+<folder>language</folder>
 <folder>lib</folder>
 </files>
 
@@ -54,49 +55,55 @@
 	<position>debug</position>
 </positions>
 
+<languages folder="language">
+	<language tag="en-GB">en-GB/en-GB.tpl_joomspirit_99.ini</language>
+	<language tag="en-GB">en-GB/en-GB.tpl_joomspirit_99.sys.ini</language>
+	<language tag="fr-FR">fr-FR/fr-FR.tpl_joomspirit_99.ini</language>
+	<language tag="fr-FR">fr-FR/fr-FR.tpl_joomspirit_99.sys.ini</language>
+</languages>
 
 <config>
 	<fields name="params">
 	
-		<fieldset name="01" label="General">
+		<fieldset name="01" label="TPL_JOOMSPIRIT_99_01_LABEL">
 		
-				<field name="color_top_bg" class="color {required:false}" type="text" default="222222" label="Background color of the header" description="Please set the color. Default : 222222" />
+				<field name="color_top_bg" class="color {required:false}" type="text" default="222222" label="TPL_JOOMSPIRIT_99_BACKGROUND_COLOR_TOP_LABEL" description="TPL_JOOMSPIRIT_99_BACKGROUND_COLOR_TOP_DESC" />
 		
-				<field name="shadow_bg" type="list" default="dark-shadow" label="Shadow under the header" description="">
-					<option value="light-shadow">Light shadow</option>
-					<option value="dark-shadow">Dark shadow</option>
-					<option value="no-shadow">No shadow</option>
+				<field name="shadow_bg" type="list" default="dark-shadow" label="TPL_JOOMSPIRIT_99_BACKGROUND_SHADOW" description="">
+					<option value="light-shadow">TPL_JOOMSPIRIT_99_LIGHT_SHADOW</option>
+					<option value="dark-shadow">TPL_JOOMSPIRIT_99_DARK_SHADOW</option>
+					<option value="no-shadow">TPL_JOOMSPIRIT_99_NO_SHADOW</option>
 				</field>
 				
 				<field type="spacer" />
 
-				<field name="sticky_menu" type="list" default="yes" label="Main menu fixed or not" description="Don't work with IE8-">
-					<option value="yes">Yes</option>
-					<option value="no">No</option>
+				<field name="sticky_menu" type="list" default="yes" label="TPL_JOOMSPIRIT_99_STICKY_MENU_LABEL" description="TPL_JOOMSPIRIT_99_STICKY_MENU_DESC">
+					<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+					<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 				</field>
 				
-				<field name="scroll_to_top" type="list" default="yes" label="Enable the button Scroll to top in the footer" description="">
-					<option value="yes">Yes</option>
-					<option value="no">No</option>
+				<field name="scroll_to_top" type="list" default="yes" label="TPL_JOOMSPIRIT_99_SCROLLTOTOP_LABEL" description="">
+					<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+					<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 				</field>
 
-				<field name="color_text_general" class="color {required:false}" type="text" default="555555" label="General color of text" description="Please set the color. Default : 555555 " />
+				<field name="color_text_general" class="color {required:false}" type="text" default="555555" label="TPL_JOOMSPIRIT_99_COLOR_TEXT_GENERAL_LABEL" description="TPL_JOOMSPIRIT_99_COLOR_TEXT_GENERAL_DESC" />
 
 				<field type="spacer" />		
 
-				<field name="border_image" type="list" default="js-border" label="Border around all your images in the content" description="" >
-					<option value="js-border">Yes</option>			
-					<option value="no-js-border">No</option>
+				<field name="border_image" type="list" default="js-border" label="TPL_JOOMSPIRIT_99_BORDER_IMAGE_LABEL" description="" >
+					<option value="js-border">TPL_JOOMSPIRIT_99_YES</option>
+					<option value="no-js-border">TPL_JOOMSPIRIT_99_NO</option>
 				</field>
 				
-				<field name="hover3d" type="list" default="no" label="Enable the script Hover3d for the image effect" description="">
-					<option value="yes">Yes</option>
-					<option value="no">No</option>
+				<field name="hover3d" type="list" default="no" label="TPL_JOOMSPIRIT_99_HOVER3D_LABEL" description="">
+					<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+					<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 				</field>
 			
 		</fieldset>
 		
-		<fieldset name="02" label="Width">
+		<fieldset name="02" label="TPL_JOOMSPIRIT_99_02_LABEL">
 
 				<field name="width_website" type="text" default="980px" size="10" label="Width of your website in px or %" description="Enter the width of your website in px or %. Example : 1200px or 80%. Default : 980px" />
 				
@@ -425,8 +432,8 @@
 				<field name="tumblr" type="text" default="" size="30" label="Tumblr URL " description="" />
 				
 				<field name="google1" type="list" default="no" label="Enable Google +1 icon" description="">
-					<option value="yes">Yes</option>
-					<option value="no">No</option>
+					<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+					<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 				</field>
 				
 				<field type="spacer" />
@@ -460,13 +467,13 @@
 		<fieldset name="07" label="Responsive design">
 				
 				<field name="responsive" type="list" default="yes" label="Enable responsive feature" description="The design change when the screen resolution is less of 980 pixels : better for mobile devices">				
-					<option value="yes">Yes</option>
-					<option value="no">No</option>
+					<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+					<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 				</field>
 				
 				<field name="column_responsive" type="list" default="no" label="Display left and right column under the content in small resolution" description="Disable this option if you use a javascript animation in your column.">				
-					<option value="yes">Yes</option>
-					<option value="no">No</option>
+					<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+					<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 				</field>
 				
 		</fieldset>
@@ -478,15 +485,15 @@
 			<field name="plate_options" type="note" class="alert alert-info" close="true" label="To customize plate effect, see jQuery Plate documentation :" description="&lt;a href='https://github.com/krebszattila/jquery-plate#options' target='_blank' &gt;jQuery Plate Options&lt;/a&gt;"/>
 			
 			<field name="animation" type="radio" default="yes" label="Enable animations for the modules positions" description="Disable this option if you doesn't want use any animation on scroll">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 
 			<field type="spacer" label="Social icons" />
 			
 			<field name="animation_social" type="radio" default="yes" label="Enable animation for Social icons" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_social_text" type="text" default="origin:'top', distance:'20px', duration:1330, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance:'20px', duration:1330, reset:true" />
@@ -494,8 +501,8 @@
 			<field type="spacer" label="Translate" />
 			
 			<field name="animation_translate" type="radio" default="yes" label="Enable animation for Translate" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_translate_text" type="text" default="origin:'top', distance:'20px', duration:1330, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance:'20px', duration:1330, reset:true" />			
@@ -503,8 +510,8 @@
 			<field type="spacer" label="Logo" />
 			
 			<field name="animation_logo" type="radio" default="no" label="Enable animation for Logo" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_logo_text" type="text" default="origin:'top', distance:'100px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.2, duration:1000, delay:100, rotate:{x:90}, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance:'100px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.2, duration:1000, delay:100, rotate:{x:90}, reset:true" />
@@ -514,8 +521,8 @@
 			<field type="spacer" label="Image" />
 			
 			<field name="animation_image" type="radio" default="no" label="Enable animation for Image" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_image_text" type="text" default="duration:1000, rotate:{y:90}, reset:true" size="30" label="ScrollReveal effect" description="Default effect = duration:1000, rotate:{y:90}, reset:true" />
@@ -525,8 +532,8 @@
 			<field type="spacer" label="Breadcrumb" />
 			
 			<field name="animation_breadcrumb" type="radio" default="yes" label="Enable animation for Breadcrumb" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_breadcrumb_text" type="text" default="easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" size="30" label="ScrollReveal effect" description="Default effect = easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" />
@@ -534,8 +541,8 @@
 			<field type="spacer" label="Left column" />
 			
 			<field name="animation_left" type="radio" default="yes" label="Enable animation for Left column" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_left_text" type="text" default="origin:'left', distance:'50px', duration:1330" size="30" label="ScrollReveal effect" description="Default effect = origin:'left', distance:'50px', duration:1330" />
@@ -545,8 +552,8 @@
 			<field type="spacer" label="Right column" />
 			
 			<field name="animation_right" type="radio" default="yes" label="Enable animation for Right column" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_right_text" type="text" default="origin:'right', distance:'50px', duration:1330" size="30" label="ScrollReveal effect" description="Default effect = origin:'right', distance:'50px', duration:1330" />
@@ -556,8 +563,8 @@
 			<field type="spacer" label="Top" />
 			
 			<field name="animation_top" type="radio" default="yes" label="Enable animation for Top" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_top_text" type="text" default="origin:'bottom', distance:'50px', duration:1330, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', duration:1330, reset:true" />
@@ -567,8 +574,8 @@
 			<field type="spacer" label="User1" />
 			
 			<field name="animation_user1" type="radio" default="yes" label="Enable animation for User1" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_user1_text" type="text" default="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
@@ -578,8 +585,8 @@
 			<field type="spacer" label="User2" />
 			
 			<field name="animation_user2" type="radio" default="yes" label="Enable animation for User2" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_user2_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, delay:600, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, delay:600, reset:true" />
@@ -589,8 +596,8 @@
 			<field type="spacer" label="User3" />
 			
 			<field name="animation_user3" type="radio" default="yes" label="Enable animation for User3" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_user3_text" type="text" default="origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" size="30" label="ScrollReveal effect" description="Default effect = origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" />
@@ -600,8 +607,8 @@
 			<field type="spacer" label="Article" />
 			
 			<field name="animation_article" type="radio" default="yes" label="Enable animation for Article" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_article_text" type="text" default="origin:'top', distance: '50px', duration:1330" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance: '50px', duration:1330" />
@@ -609,8 +616,8 @@
 			<field type="spacer" label="User4" />
 			
 			<field name="animation_user4" type="radio" default="yes" label="Enable animation for User4" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_user4_text" type="text" default="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="ScrollReveal effect" description="origin:'left', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
@@ -620,8 +627,8 @@
 			<field type="spacer" label="User5" />
 			
 			<field name="animation_user5" type="radio" default="yes" label="Enable animation for User5" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_user5_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true" />
@@ -631,8 +638,8 @@
 			<field type="spacer" label="User6" />
 			
 			<field name="animation_user6" type="radio" default="yes" label="Enable animation for User6" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_user6_text" type="text" default="origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" size="30" label="ScrollReveal effect" description="Default effect = origin:'right', distance: '50px', easing:'ease-in-out', scale: 0.8, delay:400, reset: true" />
@@ -642,8 +649,8 @@
 			<field type="spacer" label="Bottom" />
 			
 			<field name="animation_bottom" type="radio" default="yes" label="Enable animation for Bottom" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_bottom_text" type="text" default="origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true, beforeReset:function(){sr.sync()}" size="30" label="ScrollReveal effect" description="Default effect = origin:'bottom', distance:'50px', easing:'ease-in-out', scale:0.8, reset:true, beforeReset:function(){sr.sync()}" />
@@ -653,8 +660,8 @@
 			<field type="spacer" label="Search" />
 			
 			<field name="animation_search" type="radio" default="yes" label="Enable animation for Search" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_search_text" type="text" default="easing:'ease-in-out', scale:0.5, duration:1500, reset:true" size="30" label="ScrollReveal effect" description="Default effect = easing:'ease-in-out', scale:0.5, duration:1500, reset:true" />
@@ -662,8 +669,8 @@
 			<field type="spacer" label="Address" />
 			
 			<field name="animation_address" type="radio" default="yes" label="Enable animation for Address" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_address_text" type="text" default="origin:'left', distance:'20px', duration:1000, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'left', distance:'20px', duration:1000, reset:true" />
@@ -671,8 +678,8 @@
 			<field type="spacer" label="Bottom_menu" />
 			
 			<field name="animation_bottom_menu" type="radio" default="yes" label="Enable animation for Bottom_menu" description="">				
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">TPL_JOOMSPIRIT_99_YES</option>
+				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
 			<field name="animation_bottom_menu_text" type="text" default="easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" size="30" label="ScrollReveal effect" description="Default effect = easing:'ease-in-out', scale:1.5, delay:300, duration:1500, reset:true" />
