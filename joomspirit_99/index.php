@@ -217,7 +217,7 @@ foreach ($googleFonts as $loadFont) {
 	<script src="<?php echo $filepath ?>/lib/js/baffle.min.js" type="text/javascript"></script>
 	
 	<!-- load and instantiate ScrollReveal (module animation) first -->
-    <script src="<?php echo $filepath ?>/lib/js/scrollreveal.min-400.js" type="text/javascript"></script>
+    <script src="<?php echo $filepath ?>/lib/js/scrollreveal.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       window.sr = ScrollReveal();
     </script>
@@ -573,73 +573,111 @@ foreach ($googleFonts as $loadFont) {
 					.reveal(0,1000);
 			}
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_social') == 'yes' ) : ?>
-				sr.reveal('.social-links', { <?php echo $this->params->get('animation_social_text'); ?> });
-				sr.reveal('.text_social_icons', { <?php echo $this->params->get('animation_social_text'); ?>, afterReveal:function(){baffleSelection('.text_social_icons');} });
+				window.addEventListener('load', function() {
+					sr.reveal('.social-links', { <?php echo $this->params->get('animation_social_text'); ?> });
+					sr.reveal('.text_social_icons', { <?php echo $this->params->get('animation_social_text'); ?>, afterReveal:function(){baffleSelection('.text_social_icons');} });
+				});
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_translate') == 'yes' ) : ?>
+				window.addEventListener('load', function() {
 					sr.reveal('#translate', { <?php echo $this->params->get('animation_translate_text'); ?> });
+				});
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_logo') == 'yes' ) : ?>
-				sr.reveal('.logo-module', { <?php echo $this->params->get('animation_logo_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.logo-module', { <?php echo $this->params->get('animation_logo_text'); ?> });
+				});
 				jQuery('.logo-module').plate({ <?php echo $this->params->get('plate_logo_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_image') == 'yes' ) : ?>
-				sr.reveal('.image-module', { <?php echo $this->params->get('animation_image_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.image-module', { <?php echo $this->params->get('animation_image_text'); ?> });
+				});
 				jQuery('.image-module').plate({ <?php echo $this->params->get('plate_image_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_breadcrumb') == 'yes' ) : ?>
+				window.addEventListener('load', function() {
 					sr.reveal('.module-breadcrumb', { <?php echo $this->params->get('animation_breadcrumb_text'); ?> });
+				});
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_top') == 'yes' ) : ?>
-				sr.reveal('.top-module-position', { <?php echo $this->params->get('animation_top_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.top-module-position', { <?php echo $this->params->get('animation_top_text'); ?> });
+				});
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_left') == 'yes' ) : ?>
-				sr.reveal('.left_column', { <?php echo $this->params->get('animation_left_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.left_column', { <?php echo $this->params->get('animation_left_text'); ?> });
+				});
 				jQuery('.left_column').plate({ <?php echo $this->params->get('plate_left_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user1') == 'yes' ) : ?>
-				sr.reveal('.user1', { <?php echo $this->params->get('animation_user1_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.user1', { <?php echo $this->params->get('animation_user1_text'); ?> });
+				});
 				jQuery('.user1').plate({ <?php echo $this->params->get('plate_user1_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user2') == 'yes' ) : ?>
-				sr.reveal('.user2', { <?php echo $this->params->get('animation_user2_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.user2', { <?php echo $this->params->get('animation_user2_text'); ?> });
+				});
 				jQuery('.user2').plate({ <?php echo $this->params->get('plate_user2_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user3') == 'yes' ) : ?>
-				sr.reveal('.user3', { <?php echo $this->params->get('animation_user3_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.user3', { <?php echo $this->params->get('animation_user3_text'); ?> });
+				});
 				jQuery('.user3').plate({ <?php echo $this->params->get('plate_user3_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_right') == 'yes' ) : ?>
-				sr.reveal('.right_column', { <?php echo $this->params->get('animation_right_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.right_column', { <?php echo $this->params->get('animation_right_text'); ?> });
+				});
 				jQuery('.right_column').plate({ <?php echo $this->params->get('plate_right_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_article') == 'yes' ) : ?>
-				sr.reveal('.main_component', { <?php echo $this->params->get('animation_article_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.main_component', { <?php echo $this->params->get('animation_article_text'); ?> });
+				});
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user4') == 'yes' ) : ?>
-				sr.reveal('.user4', { <?php echo $this->params->get('animation_user4_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.user4', { <?php echo $this->params->get('animation_user4_text'); ?> });
+				});
 				jQuery('.user4').plate({ <?php echo $this->params->get('plate_user4_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user5') == 'yes' ) : ?>
-				sr.reveal('.user5', { <?php echo $this->params->get('animation_user5_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.user5', { <?php echo $this->params->get('animation_user5_text'); ?> });
+				});
 				jQuery('.user5').plate({ <?php echo $this->params->get('plate_user5_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_user6') == 'yes' ) : ?>
-				sr.reveal('.user6', { <?php echo $this->params->get('animation_user6_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.user6', { <?php echo $this->params->get('animation_user6_text'); ?> });
+				});
 				jQuery('.user6').plate({ <?php echo $this->params->get('plate_user6_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom') == 'yes' ) : ?>
-				sr.reveal('.bottom-module-position', { <?php echo $this->params->get('animation_bottom_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.bottom-module-position', { <?php echo $this->params->get('animation_bottom_text'); ?> });
+				});
 				jQuery('.bottom-module-position').plate({ <?php echo $this->params->get('plate_bottom_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_address') == 'yes' ) : ?>
-				sr.reveal('.address', { <?php echo $this->params->get('animation_address_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.address', { <?php echo $this->params->get('animation_address_text'); ?> });
+				});
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom_menu') == 'yes' ) : ?>
-				sr.reveal('.bottom_menu', { <?php echo $this->params->get('animation_bottom_menu_text'); ?> });
+				window.addEventListener('load', function() {
+					sr.reveal('.bottom_menu', { <?php echo $this->params->get('animation_bottom_menu_text'); ?> });
+				});
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_search') == 'yes' ) : ?>
+				window.addEventListener('load', function() {
 					sr.reveal('#search', { <?php echo $this->params->get('animation_search_text'); ?> });
+				});
 			<?php endif ; ?>
 		</script>
 	<?php endif ; ?>
