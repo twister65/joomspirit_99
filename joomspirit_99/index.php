@@ -217,7 +217,7 @@ foreach ($googleFonts as $loadFont) {
 	<script src="<?php echo $filepath ?>/lib/js/baffle.min.js" type="text/javascript"></script>
 	
 	<!-- load and instantiate ScrollReveal (module animation) first -->
-    <script src="<?php echo $filepath ?>/lib/js/scrollreveal.min.js" type="text/javascript"></script>
+    <script src="<?php echo $filepath ?>/lib/js/scrollReveal.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       window.sr = ScrollReveal();
     </script>
