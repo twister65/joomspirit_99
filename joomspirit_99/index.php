@@ -573,20 +573,14 @@ foreach ($googleFonts as $loadFont) {
 					.reveal(0,1000);
 			}
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_social') == 'yes' ) : ?>
-				window.addEventListener('load', function() {
-					sr.reveal('.social-links', { <?php echo $this->params->get('animation_social_text'); ?> });
-					sr.reveal('.text_social_icons', { <?php echo $this->params->get('animation_social_text'); ?>, afterReveal:function(){baffleSelection('.text_social_icons');} });
-				});
+				sr.reveal('.social-links', { <?php echo $this->params->get('animation_social_text'); ?> });
+				sr.reveal('.text_social_icons', { <?php echo $this->params->get('animation_social_text'); ?>, afterReveal:function(){baffleSelection('.text_social_icons');} });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_translate') == 'yes' ) : ?>
-				window.addEventListener('load', function() {
-					sr.reveal('#translate', { <?php echo $this->params->get('animation_translate_text'); ?> });
-				});
+				sr.reveal('#translate', { <?php echo $this->params->get('animation_translate_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_logo') == 'yes' ) : ?>
-				window.addEventListener('load', function() {
-					sr.reveal('.logo-module', { <?php echo $this->params->get('animation_logo_text'); ?> });
-				});
+				sr.reveal('.logo-module', { <?php echo $this->params->get('animation_logo_text'); ?> });
 				jQuery('.logo-module').plate({ <?php echo $this->params->get('plate_logo_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_image') == 'yes' ) : ?>
@@ -596,9 +590,7 @@ foreach ($googleFonts as $loadFont) {
 				jQuery('.image-module').plate({ <?php echo $this->params->get('plate_image_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_breadcrumb') == 'yes' ) : ?>
-				window.addEventListener('load', function() {
-					sr.reveal('.module-breadcrumb', { <?php echo $this->params->get('animation_breadcrumb_text'); ?> });
-				});
+				sr.reveal('.module-breadcrumb', { <?php echo $this->params->get('animation_breadcrumb_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_top') == 'yes' ) : ?>
 				window.addEventListener('load', function() {
@@ -665,22 +657,16 @@ foreach ($googleFonts as $loadFont) {
 				jQuery('.bottom-module-position').plate({ <?php echo $this->params->get('plate_bottom_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_address') == 'yes' ) : ?>
-				window.addEventListener('load', function() {
-					sr.reveal('.address', { <?php echo $this->params->get('animation_address_text'); ?> });
-				});
+				sr.reveal('.address', { <?php echo $this->params->get('animation_address_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_bottom_menu') == 'yes' ) : ?>
-				window.addEventListener('load', function() {
-					sr.reveal('.bottom_menu', { <?php echo $this->params->get('animation_bottom_menu_text'); ?> });
-				});
+				sr.reveal('.bottom_menu', { <?php echo $this->params->get('animation_bottom_menu_text'); ?> });
 			<?php endif ; ?>
 			<?php if( $this->params->get('animation') == 'yes' && $this->params->get('animation_search') == 'yes' ) : ?>
-				window.addEventListener('load', function() {
-					sr.reveal('#search', { <?php echo $this->params->get('animation_search_text'); ?> });
-				});
+				sr.reveal('#search', { <?php echo $this->params->get('animation_search_text'); ?> });
 			<?php endif ; ?>
 		</script>
 	<?php endif ; ?>
-	
+
 </body>
 </html>
