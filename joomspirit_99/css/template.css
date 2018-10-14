@@ -4686,7 +4686,7 @@ input[type="week"], input[type="number"], input[type="email"], input[type="url"]
 border: 1px solid rgba(0,0,0,0.09);
 box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.04) inset;
 height: 40px;
-line-height: 2.8em;
+line-height: 1.5em;
 padding: 0 10px;
 transition: border 0.2s linear, box-shadow 0.2s linear;
 vertical-align: middle;
