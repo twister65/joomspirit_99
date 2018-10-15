@@ -2271,11 +2271,13 @@ padding: 14px 35px;
 	top:0;
 	bottom:0;
 	width:50%;
+	min-height:50vh;
 	}
 	
 	.image-text-column {
 	float:right;
 	width:50%;
+	min-height:50vh;
 	}
 	
 	.image-text-right .image-text-image {
@@ -2284,10 +2286,6 @@ padding: 14px 35px;
 	
 	.image-text-right .image-text-column {
 	float:left;
-	}
-	
-	.image-text-column {
-	min-height:50vh;
 	}
 
 }
