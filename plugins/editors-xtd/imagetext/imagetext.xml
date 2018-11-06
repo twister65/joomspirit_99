@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
-	<name>plg_editors-xtd_imagetext</name>
-	<creationDate>28/08/2018</creationDate>
+	<name>Button - Image with Text</name>
+	<creationDate>06/11/2018</creationDate>
 	<author>twister65</author>
 	<authorUrl>https://github.com/twister65/joomspirit_99</authorUrl>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>1.0</version>
-	<downloadUrl>https://github.com/twister65/joomspirit_99/zip</downloadUrl>
-	<description>"Insert an image with text beside"</description>
+	<version>1.0.0</version>
+	<description><![CDATA[<div style="text-align:left;">
+		<h1>Image with text Plugin - Version 1.0.0</h3>
+		<h2>Insert an image with text beside or below</h2>
+		<h3>Changelog</h3>
+		<ul>
+			<li>1.0.0 : initial version</li>
+		</ul>
+		</div>]]>
+	</description>
 	<files>
-		<filename plugin="imagetext" group="editors-xtd">imagetext.php</filename>
+		<filename plugin="imagetext">imagetext.php</filename>
 	</files>
+	<config />
+	<updateservers>
+		<server type="extension" priority="2" name="Button - Image with Text">http://olaverre.free.fr/downloads/extensions/updates/imagetext.xml</server>
+	</updateservers>
 </extension>

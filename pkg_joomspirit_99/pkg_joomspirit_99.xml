@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="package" method="upgrade">
+	<name>Joomspirit 99 Package</name>
+	<packagename>joomspirit_99</packagename>
+	<author>JoomSpirit</author>
+	<creationDate>Aug 29, 2018</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.joomspirit.com</authorUrl>
+	<authorEmail>contact@joomspirit.com</authorEmail>
+	<version>3.0.0</version>
+	<packager>twister65</packager>
+	<packagerurl>https://github.com/twister65/joomspirit_99</packagerurl>
+	<description><![CDATA[<div style="text-align:left;">
+<h3>JoomSpirit 99 - 3.0 Full template and plugins Package - Version 3.0.0</h3>
+</div>]]></description>
+
+	<files folder="packages">
+		<file id="hover3d" type="plugin" group="editors-xtd">plg_editors-xtd_hover3d_v1_0_0.zip</file>
+		<file id="imagetext" type="plugin" group="editors-xtd">plg_editors-xtd_imagetext_v1_0_0.zip</file>
+		<file id="joomspirit_99" type="template" client="site">tpl_joomspirit_99_v3_0_0.zip</file>
+	</files>
+
+</extension>

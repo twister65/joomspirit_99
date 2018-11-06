@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="3.0" type="template" method="upgrade">
+<extension version="3.1" type="template" method="upgrade" client="site">
 	<name>joomspirit_99</name>
-	<creationDate>15/05/2014</creationDate>
+	<creationDate>09/10/2018</creationDate>
 	<author>JoomSpirit</author>
 	<licence>GNU General Public License v2 or later</licence>
 	<authorEmail>contact@joomspirit.com</authorEmail>
 	<authorUrl>http://www.joomspirit.com</authorUrl>
-	<version>3.0</version>
+	<version>3.0.0</version>
 	<description><![CDATA[ 
 	<script src="../templates/joomspirit_99/lib/js/jscolor/jscolor.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="../templates/joomspirit_99/css/admin.css" type="text/css" />
@@ -31,7 +31,6 @@
 <folder>language</folder>
 <folder>lib</folder>
 </files>
-
 
 <positions>
 	<position>menu</position>
@@ -186,7 +185,6 @@
 
 				<field name="color_main_menu_subitem_active" class="color {required:false}" type="text" default="97BD18" label="Color of active sub menu item" description="Please set the color. Default : 97BD18 " />
 
-											
 				<field name="font_menu" type="list" default="Dosis" label="Font for your menu" description="The font with an * are safe fonts. No need to load an extra font file on your website and support all special characters.">
 					<option value="Abel">Abel</option>
 					<option value="Arial">Arial *</option>
@@ -696,5 +694,9 @@
 	</fields>		
 
 </config>
+
+<updateservers>
+	<server type="extension" priority="2" name="JoomSpirit 99 template">http://olaverre.free.fr/downloads/extensions/updates/joomspirit99.xml</server>
+</updateservers>
 
 </extension>
