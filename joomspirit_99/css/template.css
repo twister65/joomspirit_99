@@ -2231,14 +2231,20 @@ column-count: 6;
 /********************************			Image with Text 					**************************/
 
 
-.image-text-left, .image-text-right, .image-text-below {
+.image-text-left, .image-text-right {
 position:relative;
 margin:0;
 padding:0;
 *zoom: 1;
+box-shadow: 3px 3px 18px -8px rgba(0, 0, 0, 0.35);
+transition: all 0.4s linear;
 }
 
-.image-text-below:before, .image-text-below:after,
+.image-text-left:hover, .image-text-right:hover {
+box-shadow: 8px 8px 23px -8px rgba(0,0,0,0.5);
+transition: all 0.4s linear;
+}
+
 .image-text-left:before, .image-text-left:after,
 .image-text-right:before, .image-text-right:after {
 display: table;
@@ -2246,23 +2252,46 @@ content: "";
 line-height: 0;
 }
 
-.image-text-below:after, .image-text-left:after, .image-text-right:after {
+.image-text-left:after, .image-text-right:after {
 clear: both;
 }
 
-.image-text-image, .image-text-image-below {
+.image-text-image {
 display:block;
 text-indent: -9999px;
-min-height:65vh;
+height:50vh;
+min-height:400px;
 background-position:50% 50%;
 background-repeat:no-repeat;
 background-size: cover;
 }
 
-.image-text-column, .image-text-column-below {
-padding: 14px 35px;
+.image-text-column {
+text-align:center;
+padding: 40px 35px 40px 35px;
 }
 
+.image-text-column h2 {
+border:none;
+margin: 10px 0 25px 0;
+padding:0;
+}
+
+@media screen and (max-width: 700px) {
+
+	.image-text-image {
+	min-height:300px;
+	}
+
+}
+
+@media screen and (max-width: 550px) {
+
+	.image-text-image {
+	min-height:250px;
+	}
+
+}
 
 @media screen and (min-width: 980px) {
 
@@ -2271,13 +2300,19 @@ padding: 14px 35px;
 	top:0;
 	bottom:0;
 	width:50%;
-	min-height:50vh;
+	height:auto;
+	min-height:0;
 	}
 	
 	.image-text-column {
+	text-align:left;
 	float:right;
 	width:50%;
-	min-height:50vh;
+	padding: 14px 35px;
+	}
+	
+	.image-text-image, .image-text-column {
+	min-height:0;
 	}
 	
 	.image-text-right .image-text-image {
@@ -2287,13 +2322,17 @@ padding: 14px 35px;
 	.image-text-right .image-text-column {
 	float:left;
 	}
+	
+	.image-text-column h2 {
+	margin: 10px 0 45px 0;
+	}
 
 }
 
 @media screen and (min-width: 1100px) {
 
 	.image-text-image, .image-text-column {
-	min-height:450px;
+	min-height:400px;
 	}
 	
 	.image-text-column {
@@ -2309,7 +2348,7 @@ padding: 14px 35px;
 @media screen and (min-width: 1300px) {
 
 	.image-text-image, .image-text-column {
-	min-height:400px;
+	min-height:450px;
 	}
 	
 	.image-text-column {
@@ -2322,16 +2361,91 @@ padding: 14px 35px;
 
 }
 
-.image-text-column h2, .image-text-column-below h2 {
-margin: 18px 0 16px 0;
-padding:0;
+.image-text-column h2, .image-text-column {
+color: inherit;
 }
 
-.image-text-column h2, .image-text-column-below h2, 
-.image-text-column, .image-text-column-below, 
-.image-text-column a, .image-text-column-below a, 
-.image-text-column a:hover, .image-text-column-below a:hover {
-color: inherit;
+.image-text-column a {
+display:inline-block;
+*display:inline;
+*zoom:1;
+margin-top:16px;
+border:1px solid #333;
+letter-spacing: 2px;
+line-height: 20px;
+font-size:90%;
+padding: 7px 20px;
+text-transform: uppercase;
+transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s;
+}
+
+.image-text-column a:hover {
+text-decoration:none;
+background: #333;
+color:#fff;
+transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s;
+}
+
+/***	special code for editor in Joomla admin 		**/
+
+@media screen and (min-width: 980px) {
+
+	#tinymce .image-text-image {
+	width:50% !important;
+	box-sizing:border-box;
+	}
+	
+	#tinymce .image-text-column {
+	width:50% !important;
+	padding: 14px 35px  !important;
+	box-sizing:border-box;
+	}
+	
+}
+
+
+/**		Image with text below 		**/
+
+.image-text-below {
+position:relative;
+margin:0;
+padding:0;
+box-shadow: 3px 3px 18px -8px rgba(0, 0, 0, 0.35);
+transition: all 0.4s linear;
+}
+
+.image-text-below:hover {
+box-shadow: 8px 8px 23px -8px rgba(0,0,0,0.5);
+transition: all 0.4s linear;
+}
+
+.image-text-below .image-text-image {
+position:relative;
+height:auto;
+width:auto;
+min-height:0;
+min-width:100%;
+}
+
+.image-text-below .image-text-column {
+float:none;
+text-align:left;
+padding: 30px 30px;
+margin:0;
+width:auto;
+min-height:0;
+background: rgba(0,0,0,0.02);
+}
+
+.image-text-below[class*="color-"] .image-text-column {
+background: transparent;
+}
+
+.image-text-below .image-text-column h2 {
+text-align:left;
+border:none;
+margin: 10px 0 25px 0;
+padding:0;
 }
 
 

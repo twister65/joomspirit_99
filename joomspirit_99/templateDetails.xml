@@ -512,7 +512,7 @@
 				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
-			<field name="animation_logo_text" type="text" default="origin:'top', distance:'100px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.2, duration:1000, delay:100, rotate:{x:90}, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance:'100px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.2, duration:1000, delay:100, rotate:{x:90}, reset:true" />
+			<field name="animation_logo_text" type="text" default="origin:'top', distance:'50px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.5, duration:3000, rotate:{x:90}, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'top', distance:'50px', easing:'cubic-bezier(0.68, -0.55, 0.265, 1.55)', scale:1.5, duration:3000 rotate:{x:90}, reset:true" />
 			
 			<field name="plate_logo_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 
@@ -523,7 +523,7 @@
 				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
-			<field name="animation_image_text" type="text" default="duration:1000, rotate:{y:90}, reset:true" size="30" label="ScrollReveal effect" description="Default effect = duration:1000, rotate:{y:90}, reset:true" />
+			<field name="animation_image_text" type="text" default="duration:2000, rotate:{y:90}, reset:true, viewFactor:0.6" size="30" label="ScrollReveal effect" description="Default effect = duration:2000, rotate:{y:90}, reset:true, viewFactor:0.6" />
 			
 			<field name="plate_image_text" type="text" default="inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" size="30" label="Plate effect" description="Default effect = inverse: true, perspective: 500, maxRotation: 20, animationDuration: 10" />
 			
@@ -671,7 +671,7 @@
 				<option value="no">TPL_JOOMSPIRIT_99_NO</option>
 			</field>
 			
-			<field name="animation_address_text" type="text" default="origin:'left', distance:'20px', duration:1000, reset:true" size="30" label="ScrollReveal effect" description="Default effect = origin:'left', distance:'20px', duration:1000, reset:true" />
+			<field name="animation_address_text" type="text" default="easing:'ease-in-out', scale:0.5, duration:1500, reset:true" size="30" label="ScrollReveal effect" description="Default effect = easing:'ease-in-out', scale:0.5, duration:1500, reset:true" />
 			
 			<field type="spacer" label="Bottom_menu" />
 			
